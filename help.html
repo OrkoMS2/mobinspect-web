@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MobInspect Help Center - Get answers to frequently asked questions, user guides, and troubleshooting tips.">
+
+  <title>Help & Support - MobInspect</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- Animated Background Orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="MobInspect" class="logo-img">
+        <span>MobInspect</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="help.html" class="active">Help</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#download" class="nav-cta">Download</a></li>
+      </ul>
+
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Help & Support</h1>
+      <p>Find answers to common questions, learn how to use MobInspect, and get help when you need it.</p>
+    </div>
+  </header>
+
+  <!-- Quick Links Section -->
+  <section class="content-section" style="padding-top: 0;">
+    <div class="container">
+      <div class="features-grid" style="margin-bottom: var(--spacing-lg);">
+        <a href="#getting-started" class="feature-card" style="text-decoration: none;">
+          <div class="feature-icon">🚀</div>
+          <h3>Getting Started</h3>
+          <p>Learn the basics of using MobInspect and perform your first security scan.</p>
+        </a>
+
+        <a href="#faq" class="feature-card" style="text-decoration: none;">
+          <div class="feature-icon">❓</div>
+          <h3>FAQ</h3>
+          <p>Find quick answers to the most frequently asked questions.</p>
+        </a>
+
+        <a href="#troubleshooting" class="feature-card" style="text-decoration: none;">
+          <div class="feature-icon">🔧</div>
+          <h3>Troubleshooting</h3>
+          <p>Solve common issues and get your scans working smoothly.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Getting Started Section -->
+  <section class="content-section" id="getting-started">
+    <div class="container">
+      <div class="section-header" style="text-align: left; max-width: 100%;">
+        <span class="section-tag">Guides</span>
+        <h2>Getting Started</h2>
+      </div>
+
+      <div class="content-card">
+        <h2>How to Scan Your First APK</h2>
+
+        <h3>Step 1: Grant Permissions</h3>
+        <p>When you first launch MobInspect, you'll need to grant the following permissions:</p>
+        <ul>
+          <li><strong>Storage Access:</strong> Required to read APK files on your device</li>
+          <li><strong>Notification Permission:</strong> Optional, but recommended for scan completion alerts</li>
+        </ul>
+
+        <!-- IMAGE PROMPT: A screenshot showing Android permission dialog for storage access with MobInspect branding. Dark theme, show "Allow" button highlighted. Include the app icon and clear permission explanation text. Size: 400x300px -->
+        <div class="image-placeholder">
+          <div class="image-placeholder-icon">📱</div>
+          <p><strong>IMAGE PROMPT:</strong> Android permission dialog for storage access with MobInspect branding. Dark theme, "Allow" button highlighted, app icon visible. Size: 400x300px</p>
+        </div>
+
+        <h3>Step 2: Select an APK File</h3>
+        <p>Tap the scan button on the home screen and choose how you want to select an APK:</p>
+        <ul>
+          <li><strong>Browse Files:</strong> Navigate to an APK file on your device</li>
+          <li><strong>Installed Apps:</strong> Select from apps already installed on your device</li>
+          <li><strong>Recent Downloads:</strong> Quick access to recently downloaded APK files</li>
+        </ul>
+
+        <h3>Step 3: Start the Scan</h3>
+        <p>Once you've selected an APK, tap "Start Scan" to begin the analysis. The scan progress will show:</p>
+        <ul>
+          <li>Current analysis stage (Permissions, Code Analysis, AI Detection)</li>
+          <li>Progress percentage</li>
+          <li>Estimated time remaining</li>
+        </ul>
+
+        <h3>Step 4: Review Results</h3>
+        <p>After the scan completes, you'll see a comprehensive security report including:</p>
+        <ul>
+          <li><strong>Risk Score:</strong> Overall security rating from 0-100</li>
+          <li><strong>Threat Summary:</strong> Any detected malware or suspicious behaviors</li>
+          <li><strong>Permission Analysis:</strong> Breakdown of app permissions and their risks</li>
+          <li><strong>AI Detection Results:</strong> Scores from all three detection layers</li>
+          <li><strong>Recommendations:</strong> Actionable suggestions based on findings</li>
+        </ul>
+      </div>
+
+      <div class="content-card">
+        <h2>Understanding Scan Results</h2>
+
+        <h3>Risk Score Interpretation</h3>
+        <ul>
+          <li><strong style="color: #00ff88;">0-30 (Low Risk):</strong> App appears safe. No significant threats detected.</li>
+          <li><strong style="color: #ffb800;">31-60 (Medium Risk):</strong> Some concerns found. Review the detailed findings.</li>
+          <li><strong style="color: #ff6b6b;">61-80 (High Risk):</strong> Significant issues detected. Exercise caution.</li>
+          <li><strong style="color: #ff3366;">81-100 (Critical Risk):</strong> Severe threats found. Do not install this app.</li>
+        </ul>
+
+        <h3>AI Detection Layers</h3>
+        <p>Our 3-layer detection system provides individual scores:</p>
+        <ul>
+          <li><strong>Machine Learning (ML) Score:</strong> Pattern-based detection using trained neural networks</li>
+          <li><strong>Rule-Based Score:</strong> Matches against known malware signatures and patterns</li>
+          <li><strong>Heuristic Score:</strong> Behavioral analysis for unknown/zero-day threats</li>
+        </ul>
+
+        <h3>Permission Risk Levels</h3>
+        <ul>
+          <li><strong style="color: #00ff88;">Safe:</strong> Standard permissions with minimal privacy impact</li>
+          <li><strong style="color: #ffb800;">Moderate:</strong> Permissions that could affect privacy if misused</li>
+          <li><strong style="color: #ff3366;">Dangerous:</strong> High-risk permissions that require careful consideration</li>
+        </ul>
+      </div>
+
+      <div class="content-card">
+        <h2>Managing Scan Reports</h2>
+
+        <h3>Saving Reports</h3>
+        <p>After a scan completes, you can save the report for future reference:</p>
+        <ul>
+          <li>Tap the "Save Report" button on the results screen</li>
+          <li>Reports are stored locally on your device</li>
+          <li>Access saved reports from the "Reports" tab in the app</li>
+        </ul>
+
+        <h3>Sharing Reports</h3>
+        <p>Share scan results with others:</p>
+        <ul>
+          <li>Tap the share icon on any report</li>
+          <li>Choose to share as text summary or full report</li>
+          <li>Share via messaging apps, email, or save to files</li>
+        </ul>
+
+        <h3>Deleting Reports</h3>
+        <p>Remove reports you no longer need:</p>
+        <ul>
+          <li>Swipe left on a report in the list to delete</li>
+          <li>Or use the delete button in report details</li>
+          <li>Deleted reports cannot be recovered</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="content-section" id="faq">
+    <div class="container">
+      <div class="section-header" style="text-align: left; max-width: 100%;">
+        <span class="section-tag">FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <!-- General Questions -->
+      <div class="content-card">
+        <h2>General Questions</h2>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is MobInspect?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>MobInspect is an advanced mobile security application that uses AI-powered technology to scan Android APK files for malware, vulnerabilities, and privacy threats. Our 3-layer detection engine combines Machine Learning, Rule-Based Analysis, and Heuristic Scanning to provide comprehensive security analysis.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is MobInspect free to use?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Yes! MobInspect is completely free to download and use. All core scanning features are available at no cost. We may introduce premium features in the future, but the essential security scanning will always remain free.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Does MobInspect require an internet connection?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>No, MobInspect works completely offline. All AI models and scanning algorithms run locally on your device. This means your APK files and scan data never leave your phone, ensuring maximum privacy and security.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What Android versions are supported?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>MobInspect supports Android 6.0 (Marshmallow) and above. For the best experience, we recommend Android 10 or later. Some features may be limited on older Android versions due to system restrictions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is there an iOS version available?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>We're currently developing an iOS version of MobInspect. Due to iOS security restrictions, the feature set will be different from the Android version. Follow us on social media for updates on the iOS release.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scanning Questions -->
+      <div class="content-card">
+        <h2>Scanning Questions</h2>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How long does a scan take?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Scan times vary depending on the APK file size and your device's processing power. Most scans complete within 10-60 seconds. Larger apps (over 100MB) may take 1-2 minutes. The scan runs in the background, so you can use other apps while waiting.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I scan installed apps?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Yes! MobInspect can scan both APK files and apps already installed on your device. Simply select "Installed Apps" when starting a scan, and choose the app you want to analyze from the list.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What does each detection layer do?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p><strong>Machine Learning Layer:</strong> Uses neural networks trained on millions of malware samples to identify complex patterns and behaviors that traditional methods might miss.</p>
+              <p><strong>Rule-Based Layer:</strong> Compares the APK against a database of known malware signatures, suspicious code patterns, and blacklisted behaviors.</p>
+              <p><strong>Heuristic Layer:</strong> Analyzes app behavior to detect unknown threats (zero-day) by identifying suspicious activities that deviate from normal app behavior.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can scans continue in the background?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Yes! MobInspect uses a foreground service to continue scanning even when the app is minimized or your screen is off. You'll see a persistent notification showing scan progress, and you'll be notified when the scan is complete.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Why was my app flagged as malware?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Apps can be flagged for various reasons:</p>
+              <ul>
+                <li><strong>Known Malware:</strong> The app matches known malware signatures</li>
+                <li><strong>Suspicious Permissions:</strong> Requesting dangerous permissions without clear justification</li>
+                <li><strong>Code Obfuscation:</strong> Excessive code hiding techniques often used by malware</li>
+                <li><strong>Network Behavior:</strong> Suspicious network communication patterns</li>
+                <li><strong>False Positive:</strong> Sometimes legitimate apps trigger warnings. Review the detailed findings to understand why.</li>
+              </ul>
+              <p>Always review the detailed scan report to understand specific concerns before making a decision.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Privacy & Security Questions -->
+      <div class="content-card">
+        <h2>Privacy & Security</h2>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is my data safe with MobInspect?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Absolutely. MobInspect is designed with privacy as a core principle:</p>
+              <ul>
+                <li>All scanning happens locally on your device</li>
+                <li>APK files are never uploaded to any server</li>
+                <li>Scan results are stored only on your device</li>
+                <li>We don't collect personal information</li>
+                <li>No account or registration required</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Why does MobInspect need storage permission?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Storage permission is required to read APK files from your device's storage. Without this permission, MobInspect cannot access the files you want to scan. We only read the specific files you select and never access other files on your device.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Does MobInspect collect any analytics?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>We collect minimal, anonymized usage analytics to help improve the app. This includes:</p>
+              <ul>
+                <li>App crashes and errors (to fix bugs)</li>
+                <li>Feature usage statistics (to improve the UI)</li>
+                <li>Device type and OS version (for compatibility)</li>
+              </ul>
+              <p>You can disable analytics in the app settings. We never collect information about the apps you scan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Troubleshooting Section -->
+  <section class="content-section" id="troubleshooting">
+    <div class="container">
+      <div class="section-header" style="text-align: left; max-width: 100%;">
+        <span class="section-tag">Support</span>
+        <h2>Troubleshooting</h2>
+      </div>
+
+      <div class="content-card">
+        <h2>Common Issues & Solutions</h2>
+
+        <h3>Scan Stuck or Not Starting</h3>
+        <p><strong>Symptoms:</strong> The scan progress bar doesn't move or the scan fails to start.</p>
+        <p><strong>Solutions:</strong></p>
+        <ul>
+          <li>Ensure storage permission is granted in device settings</li>
+          <li>Try restarting the app</li>
+          <li>Check if the APK file is corrupted (try a different file)</li>
+          <li>Clear app cache: Settings → Apps → MobInspect → Clear Cache</li>
+          <li>Ensure your device has at least 500MB free storage</li>
+        </ul>
+
+        <h3>App Crashes During Scan</h3>
+        <p><strong>Symptoms:</strong> The app closes unexpectedly during scanning.</p>
+        <p><strong>Solutions:</strong></p>
+        <ul>
+          <li>Update to the latest version of MobInspect</li>
+          <li>Close other apps to free up memory</li>
+          <li>Restart your device</li>
+          <li>Try scanning a smaller APK file first</li>
+          <li>Report the issue via Contact Us with the APK name</li>
+        </ul>
+
+        <h3>Notification Not Showing</h3>
+        <p><strong>Symptoms:</strong> You don't receive scan completion notifications.</p>
+        <p><strong>Solutions:</strong></p>
+        <ul>
+          <li>Check notification permission: Settings → Apps → MobInspect → Notifications</li>
+          <li>Ensure notifications are not blocked by Do Not Disturb mode</li>
+          <li>Check that battery optimization isn't killing background processes</li>
+          <li>Enable "Show notifications" in MobInspect settings</li>
+        </ul>
+
+        <h3>Storage Permission Denied</h3>
+        <p><strong>Symptoms:</strong> Cannot select files or "Permission denied" error.</p>
+        <p><strong>Solutions:</strong></p>
+        <ul>
+          <li>Go to device Settings → Apps → MobInspect → Permissions</li>
+          <li>Enable Storage/Files permission</li>
+          <li>On Android 11+, you may need to grant "All files access"</li>
+          <li>Restart the app after granting permissions</li>
+        </ul>
+
+        <h3>High Battery Usage</h3>
+        <p><strong>Symptoms:</strong> Battery drains quickly when using MobInspect.</p>
+        <p><strong>Solutions:</strong></p>
+        <ul>
+          <li>This is normal during active scans (AI processing is CPU-intensive)</li>
+          <li>Battery usage should return to normal after scan completion</li>
+          <li>Disable background scanning if you don't need it</li>
+          <li>Enable battery saver mode on your device</li>
+        </ul>
+
+        <h3>False Positives</h3>
+        <p><strong>Symptoms:</strong> A legitimate app is flagged as malware.</p>
+        <p><strong>Solutions:</strong></p>
+        <ul>
+          <li>Review the detailed findings to understand the specific concerns</li>
+          <li>Check if the app is from a trusted source (official app store)</li>
+          <li>Report false positives to us via Contact Us so we can improve detection</li>
+          <li>Consider the app's reputation and reviews from other users</li>
+        </ul>
+      </div>
+
+      <div class="content-card">
+        <h2>Still Need Help?</h2>
+        <p>If you couldn't find a solution to your problem, we're here to help!</p>
+        <div style="display: flex; gap: var(--spacing-md); flex-wrap: wrap; margin-top: var(--spacing-md);">
+          <a href="contact.html" class="btn btn-primary">Contact Support</a>
+          <a href="mailto:orko.pmo.bulipe@gmail.com" class="btn btn-secondary">Email Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="MobInspect" class="logo-img">
+            <span>MobInspect</span>
+          </a>
+          <p>Offline APK Security Analyzer. Surpass MobSF with on-device AI-powered threat detection.</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Product</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#download">Download</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="help.html" class="active">Help & Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Help</h4>
+          <ul class="footer-links">
+            <li><a href="#getting-started">Getting Started</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#troubleshooting">Troubleshooting</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 MobInspect. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
