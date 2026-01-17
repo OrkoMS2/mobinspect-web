@@ -1,0 +1,679 @@
+/* ============================================
+   Tutorial Page - Futuristic Animations
+   ============================================ */
+
+/* Cyber Font for Headers */
+.tutorial-cyber-text {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Animated Particle Background */
+.particle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 50%;
+  animation: particleFloat 15s infinite linear;
+  opacity: 0;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Glitch Effect for Page Header */
+.glitch-container {
+  position: relative;
+}
+
+.glitch-text {
+  position: relative;
+  display: inline-block;
+  animation: glitchText 3s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--primary);
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  animation: glitchTop 2.5s infinite;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: 2px 0 var(--secondary);
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  animation: glitchBottom 3.5s infinite;
+}
+
+@keyframes glitchText {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitchTop {
+  0%, 100% { clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%); transform: translate(0); }
+  50% { clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%); transform: translate(-5px, 0); }
+}
+
+@keyframes glitchBottom {
+  0%, 100% { clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%); transform: translate(0); }
+  50% { clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%); transform: translate(5px, 0); }
+}
+
+/* Holographic Header Effect */
+.holo-header {
+  position: relative;
+  padding: calc(var(--spacing-xl) + 100px) 0 var(--spacing-xl);
+  overflow: hidden;
+}
+
+.holo-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    linear-gradient(135deg, rgba(0, 245, 255, 0.1) 0%, transparent 50%),
+    linear-gradient(225deg, rgba(178, 75, 243, 0.1) 0%, transparent 50%);
+  animation: holoShift 8s ease-in-out infinite;
+}
+
+@keyframes holoShift {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.holo-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(0, 245, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { transform: perspective(500px) rotateX(60deg) translateY(0); }
+  100% { transform: perspective(500px) rotateX(60deg) translateY(30px); }
+}
+
+/* Scan Line Animation */
+.scan-line-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.scan-line-overlay::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    transparent 0%,
+    rgba(0, 245, 255, 0.03) 50%,
+    transparent 100%
+  );
+  animation: scanOverlay 4s linear infinite;
+}
+
+@keyframes scanOverlay {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+/* Neon Border Cards */
+.neon-card {
+  position: relative;
+  background: rgba(26, 26, 37, 0.9);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  overflow: hidden;
+}
+
+.neon-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--radius-lg);
+  padding: 2px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent), var(--primary));
+  background-size: 300% 300%;
+  animation: borderGlow 4s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+@keyframes borderGlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Floating Step Badge */
+.cyber-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  animation: badgeFloat 3s ease-in-out infinite, badgePulse 2s ease-in-out infinite;
+  box-shadow:
+    0 0 20px var(--primary-glow),
+    inset 0 0 20px rgba(0, 245, 255, 0.1);
+}
+
+.cyber-badge::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: badgeRing 2s ease-out infinite;
+}
+
+@keyframes badgeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 20px var(--primary-glow), inset 0 0 20px rgba(0, 245, 255, 0.1); }
+  50% { box-shadow: 0 0 40px var(--primary-glow), inset 0 0 30px rgba(0, 245, 255, 0.2); }
+}
+
+@keyframes badgeRing {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Tutorial Step with 3D Transform */
+.tutorial-step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tutorial-step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tutorial-step.reverse {
+  direction: rtl;
+}
+
+.tutorial-step.reverse > * {
+  direction: ltr;
+}
+
+.tutorial-step-content {
+  padding: var(--spacing-md);
+}
+
+.tutorial-step-image {
+  perspective: 1000px;
+}
+
+.image-3d-wrapper {
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.tutorial-step-image:hover .image-3d-wrapper {
+  transform: rotateY(-5deg) rotateX(5deg);
+}
+
+/* Cyber Image Placeholder */
+.cyber-placeholder {
+  position: relative;
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cyber-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.1), transparent);
+  animation: placeholderShine 3s infinite;
+}
+
+@keyframes placeholderShine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.cyber-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  animation: iconFloat 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px var(--primary-glow));
+}
+
+@keyframes iconFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.05); }
+}
+
+/* Animated Connection Line */
+.step-connector {
+  position: relative;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-md) 0;
+}
+
+.step-connector::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+  animation: lineGlow 2s ease-in-out infinite;
+}
+
+.step-connector::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--primary);
+  border-radius: 50%;
+  top: 0;
+  animation: dotTravel 2s ease-in-out infinite;
+  box-shadow: 0 0 20px var(--primary);
+}
+
+@keyframes lineGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes dotTravel {
+  0% { top: 0; }
+  100% { top: calc(100% - 10px); }
+}
+
+/* Video Container with Cyber Frame */
+.cyber-video-frame {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: calc(var(--radius-lg) + 4px);
+  animation: frameGlow 3s ease-in-out infinite;
+}
+
+@keyframes frameGlow {
+  0%, 100% { box-shadow: 0 0 30px var(--primary-glow); }
+  50% { box-shadow: 0 0 60px var(--primary-glow), 0 0 100px var(--secondary-glow); }
+}
+
+.cyber-video-frame.video-playing {
+  animation: frameGlowPlaying 1.5s ease-in-out infinite;
+}
+
+@keyframes frameGlowPlaying {
+  0%, 100% { box-shadow: 0 0 40px var(--accent-glow), 0 0 80px var(--primary-glow); }
+  50% { box-shadow: 0 0 60px var(--accent-glow), 0 0 120px var(--primary-glow); }
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--bg-tertiary);
+}
+
+.video-container iframe,
+.video-container #youtube-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: var(--radius-lg);
+}
+
+.video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+}
+
+.video-play-btn {
+  width: 100px;
+  height: 100px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: playPulse 2s ease-in-out infinite;
+}
+
+.video-play-btn:hover {
+  transform: scale(1.1);
+}
+
+.video-play-btn svg {
+  width: 40px;
+  height: 40px;
+  fill: var(--bg-primary);
+  margin-left: 5px;
+}
+
+@keyframes playPulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--primary-glow); }
+  50% { box-shadow: 0 0 0 20px transparent; }
+}
+
+/* Feature Cards with Holographic Effect */
+.holo-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.holo-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    var(--primary-glow),
+    transparent,
+    var(--secondary-glow),
+    transparent
+  );
+  animation: holoRotate 6s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.holo-card:hover::before {
+  opacity: 1;
+}
+
+.holo-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: transparent;
+}
+
+.holo-card-content {
+  position: relative;
+  z-index: 1;
+  background: var(--bg-card);
+  border-radius: calc(var(--radius-lg) - 2px);
+  padding: var(--spacing-md);
+  height: 100%;
+}
+
+@keyframes holoRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Animated Feature Icon */
+.feature-icon-animated {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(178, 75, 243, 0.2));
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-md);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.holo-card:hover .feature-icon-animated {
+  background: linear-gradient(135deg, rgba(0, 245, 255, 0.4), rgba(178, 75, 243, 0.4));
+  border-color: var(--primary);
+  transform: rotateY(180deg);
+  box-shadow: 0 0 30px var(--primary-glow);
+}
+
+/* Typing Effect */
+.typing-text {
+  overflow: hidden;
+  border-right: 3px solid var(--primary);
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--primary); }
+}
+
+/* Section Divider */
+.cyber-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
+  margin: var(--spacing-xl) 0;
+  position: relative;
+}
+
+.cyber-divider::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: var(--bg-primary);
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--primary);
+}
+
+/* Data Stream Effect */
+.data-stream {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+.data-char {
+  position: absolute;
+  color: var(--primary);
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  animation: dataFall 8s linear infinite;
+  text-shadow: 0 0 10px var(--primary);
+}
+
+@keyframes dataFall {
+  0% { transform: translateY(-100%); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tutorial-step {
+    grid-template-columns: 1fr;
+  }
+  .tutorial-step.reverse {
+    direction: ltr;
+  }
+  .cyber-badge {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+  .cyber-placeholder {
+    min-height: 250px;
+  }
+  .cyber-icon {
+    font-size: 3.5rem;
+  }
+}
+
+/* Tips Section Enhanced */
+.tip-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.tip-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.tip-card:hover::after {
+  transform: scaleX(1);
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.tip-number {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--primary);
+  opacity: 0.1;
+}

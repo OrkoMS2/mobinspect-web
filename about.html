@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="About MobInspect - Learn about our mission to make mobile security accessible to everyone through AI-powered technology.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://orkoms2.github.io/mobinspect-web/about.html">
 
   <title>About Us - MobInspect</title>
 
@@ -17,6 +20,7 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
 </head>
 <body>
   <!-- Animated Background Orbs -->
@@ -32,8 +36,16 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="index.html#features">Features</a></li>
-        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li class="nav-dropdown">
+          <a href="index.html">Home</a>
+          <div class="dropdown-menu">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#ai-analysis">AI Technology</a>
+            <a href="index.html#how-it-works">How It Works</a>
+            <a href="index.html#comparison">Compare</a>
+          </div>
+        </li>
+        <li><a href="tutorial.html">Tutorial</a></li>
         <li><a href="help.html">Help</a></li>
         <li><a href="about.html" class="active">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -68,10 +80,11 @@
         </div>
         <div>
           <!-- IMAGE PROMPT: An abstract illustration showing a protective shield with AI neural network patterns emanating from it, protecting a smartphone. Use dark blue/purple background with cyan and purple glowing elements. Modern, minimalist style. Size: 500x400px -->
-          <div class="image-placeholder">
+          <img src="assets/images/mission-shield.png" alt="AI Shield Protection" style="width: 100%; border-radius: var(--radius-md);">
+          <!-- <div class="image-placeholder">
             <div class="image-placeholder-icon">🎯</div>
             <p><strong>IMAGE PROMPT:</strong> Abstract shield with AI neural network patterns protecting a smartphone. Dark blue/purple background with cyan/purple glow. Minimalist style. Size: 500x400px</p>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -158,10 +171,11 @@
       <div class="hero-content" style="grid-template-columns: 1fr 1fr; gap: var(--spacing-lg);">
         <div>
           <!-- IMAGE PROMPT: A futuristic technical diagram showing the 3-layer AI detection system. Visualize three interconnected hexagonal nodes labeled "Machine Learning," "Rule-Based," and "Heuristic" with data streams flowing between them. Dark theme with cyan, purple, and green highlights. Size: 500x400px -->
-          <div class="image-placeholder">
+          <img src="assets/images/ai-detection-diagram.png" alt="3-Layer AI Detection System" style="width: 100%; border-radius: var(--radius-md);">
+          <!-- <div class="image-placeholder">
             <div class="image-placeholder-icon">🧬</div>
             <p><strong>IMAGE PROMPT:</strong> Technical diagram of 3-layer AI detection system with three hexagonal nodes (ML, Rule-Based, Heuristic) and flowing data streams. Dark theme with cyan/purple/green highlights. Size: 500x400px</p>
-          </div>
+          </div> -->
         </div>
         <div>
           <h3>3-Layer AI Detection Engine</h3>
@@ -210,6 +224,7 @@
       <div class="team-grid">
         <div class="team-member">
           <!-- IMAGE PROMPT: Professional avatar placeholder showing a futuristic silhouette with subtle cyber/tech elements. Dark background with cyan accent glow around the edges. Minimalist, modern style. Size: 120x120px circular -->
+          <!-- <img src="assets/images/team-orko.png" alt="Orko" class="team-avatar-img" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;"> -->
           <div class="team-avatar">👨‍💻</div>
           <h3>Orko</h3>
           <p class="team-role">Founder & Lead Developer</p>
@@ -218,6 +233,7 @@
 
         <div class="team-member">
           <!-- IMAGE PROMPT: Professional avatar placeholder showing a futuristic silhouette with AI/neural network visual elements. Dark background with purple accent glow. Minimalist, modern style. Size: 120x120px circular -->
+          <!-- <img src="assets/images/team-ai-research.png" alt="AI Research Team" class="team-avatar-img" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;"> -->
           <div class="team-avatar">🤖</div>
           <h3>AI Research Team</h3>
           <p class="team-role">Machine Learning Engineers</p>
@@ -226,6 +242,7 @@
 
         <div class="team-member">
           <!-- IMAGE PROMPT: Professional avatar placeholder showing a futuristic silhouette with shield/protection visual elements. Dark background with green accent glow. Minimalist, modern style. Size: 120x120px circular -->
+          <!-- <img src="assets/images/team-security.png" alt="Security Analysts" class="team-avatar-img" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;"> -->
           <div class="team-avatar">🛡️</div>
           <h3>Security Analysts</h3>
           <p class="team-role">Threat Research</p>
@@ -245,7 +262,7 @@
 
       <div class="steps-container" style="max-width: 800px; margin: 0 auto;">
         <div class="step">
-          <div class="step-number">2023</div>
+          <div class="step-number">2024</div>
           <div class="step-content">
             <h3>Project Genesis</h3>
             <p>MobInspect concept developed. Initial research into AI-based malware detection begins. First prototype created.</p>
@@ -253,7 +270,7 @@
         </div>
 
         <div class="step">
-          <div class="step-number">2024</div>
+          <div class="step-number">2025</div>
           <div class="step-content">
             <h3>Beta Launch</h3>
             <p>First public beta released. 3-layer detection engine implemented. Received invaluable feedback from early adopters.</p>
@@ -261,7 +278,7 @@
         </div>
 
         <div class="step">
-          <div class="step-number">2024</div>
+          <div class="step-number">2026</div>
           <div class="step-content">
             <h3>Official Launch</h3>
             <p>MobInspect 1.0 released on Google Play Store. Background scanning, enhanced AI analysis, and comprehensive reporting added.</p>
@@ -304,7 +321,7 @@
             <img src="assets/images/logo.png" alt="MobInspect" class="logo-img">
             <span>MobInspect</span>
           </a>
-          <p>Offline APK Security Analyzer. Surpass MobSF with on-device AI-powered threat detection.</p>
+          <p>Advanced Offline APK Security Analyzer with on-device AI-powered threat detection.</p>
         </div>
 
         <div class="footer-column">
@@ -338,7 +355,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2024 MobInspect. All rights reserved.</p>
+        <p>&copy; 2026 MobInspect. All rights reserved.</p>
         <div class="social-links">
           <a href="#" aria-label="Twitter">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">

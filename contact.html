@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contact MobInspect - Get in touch with our support team, report bugs, request features, or send us feedback.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://orkoms2.github.io/mobinspect-web/contact.html">
 
   <title>Contact Us - MobInspect</title>
 
@@ -17,6 +20,7 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
 </head>
 <body>
   <!-- Animated Background Orbs -->
@@ -32,8 +36,16 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="index.html#features">Features</a></li>
-        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li class="nav-dropdown">
+          <a href="index.html">Home</a>
+          <div class="dropdown-menu">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#ai-analysis">AI Technology</a>
+            <a href="index.html#how-it-works">How It Works</a>
+            <a href="index.html#comparison">Compare</a>
+          </div>
+        </li>
+        <li><a href="tutorial.html">Tutorial</a></li>
         <li><a href="help.html">Help</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
@@ -64,8 +76,8 @@
           <div class="feature-icon">📧</div>
           <h3>Email Support</h3>
           <p>Get help with technical issues, account problems, or general inquiries.</p>
-          <a href="mailto:orko.pmo.bulipe@gmail.com" class="btn btn-secondary" style="margin-top: var(--spacing-sm);">
-            orko.pmo.bulipe@gmail.com
+          <a href="mailto:orko.pmo.bulipe@gmail.com?subject=Support Request" class="btn btn-secondary" style="margin-top: var(--spacing-sm);">
+            orko@mobinspect.com
           </a>
         </div>
 
@@ -73,8 +85,8 @@
           <div class="feature-icon">🐛</div>
           <h3>Report a Bug</h3>
           <p>Found something that's not working right? Let us know so we can fix it.</p>
-          <a href="mailto:orko.pmo.bulipe@gmail.com" class="btn btn-secondary" style="margin-top: var(--spacing-sm);">
-            orko.pmo.bulipe@gmail.com
+          <a href="mailto:orko.pmo.bulipe@gmail.com?subject=Bug Report" class="btn btn-secondary" style="margin-top: var(--spacing-sm);">
+            orko@mobinspect.com
           </a>
         </div>
 
@@ -82,8 +94,8 @@
           <div class="feature-icon">💡</div>
           <h3>Feature Request</h3>
           <p>Have an idea for a new feature? We're always looking to improve.</p>
-          <a href="mailto:orko.pmo.bulipe@gmail.com" class="btn btn-secondary" style="margin-top: var(--spacing-sm);">
-            orko.pmo.bulipe@gmail.com
+          <a href="mailto:orko.pmo.bulipe@gmail.com?subject=Feature Request" class="btn btn-secondary" style="margin-top: var(--spacing-sm);">
+            orko@mobinspect.com
           </a>
         </div>
       </div>
@@ -100,34 +112,41 @@
           <h2>Send Us a Message</h2>
           <p style="margin-bottom: var(--spacing-md);">Fill out the form below and we'll get back to you as soon as possible.</p>
 
-          <form class="contact-form" id="contactForm">
+          <form class="contact-form" id="contactForm" action="https://formsubmit.co/orko.pmo.bulipe@gmail.com" method="POST">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="New MobInspect Contact Form Submission">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://orkoms2.github.io/mobinspect-web/contact.html?success=true">
+            <input type="text" name="_honey" style="display:none">
+
             <div class="form-group">
               <label for="name">Your Name *</label>
-              <input type="text" id="name" name="name" required placeholder="John Doe">
+              <input type="text" id="name" name="name" required placeholder="John Doe" minlength="2" maxlength="100" autocomplete="name">
             </div>
 
             <div class="form-group">
               <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" required placeholder="john@example.com">
+              <input type="email" id="email" name="email" required placeholder="john@example.com" autocomplete="email">
             </div>
 
             <div class="form-group">
               <label for="subject">Subject *</label>
               <select id="subject" name="subject" required>
                 <option value="">Select a topic...</option>
-                <option value="support">Technical Support</option>
-                <option value="bug">Bug Report</option>
-                <option value="feature">Feature Request</option>
-                <option value="feedback">General Feedback</option>
-                <option value="business">Business Inquiry</option>
-                <option value="privacy">Privacy Concern</option>
-                <option value="other">Other</option>
+                <option value="Technical Support">Technical Support</option>
+                <option value="Bug Report">Bug Report</option>
+                <option value="Feature Request">Feature Request</option>
+                <option value="General Feedback">General Feedback</option>
+                <option value="Business Inquiry">Business Inquiry</option>
+                <option value="Privacy Concern">Privacy Concern</option>
+                <option value="Other">Other</option>
               </select>
             </div>
 
             <div class="form-group">
               <label for="message">Message *</label>
-              <textarea id="message" name="message" required placeholder="Please describe your question, issue, or feedback in detail..."></textarea>
+              <textarea id="message" name="message" required placeholder="Please describe your question, issue, or feedback in detail..." minlength="10" maxlength="5000" rows="5"></textarea>
             </div>
 
             <div class="form-group">
@@ -147,27 +166,27 @@
           <div class="content-card">
             <h2>Other Ways to Reach Us</h2>
 
-            <div style="margin: var(--spacing-md) 0;">
+            <!-- <div style="margin: var(--spacing-md) 0;">
               <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Email Addresses</h4>
               <ul style="list-style: none;">
                 <li style="margin-bottom: 0.5rem;">
                   <strong>General:</strong>
-                  <a href="mailto:orko.pmo.bulipe@gmail.com">orko.pmo.bulipe@gmail.com</a>
+                  <a href="mailto:orko.pmo.bulipe@gmail.com?subject=General Inquiry">orko@mobinspect.com</a>
                 </li>
                 <li style="margin-bottom: 0.5rem;">
                   <strong>Support:</strong>
-                  <a href="mailto:orko.pmo.bulipe@gmail.com">orko.pmo.bulipe@gmail.com</a>
+                  <a href="mailto:orko.pmo.bulipe@gmail.com?subject=Support Request">orko@mobinspect.com</a>
                 </li>
                 <li style="margin-bottom: 0.5rem;">
                   <strong>Privacy:</strong>
-                  <a href="mailto:orko.pmo.bulipe@gmail.com">orko.pmo.bulipe@gmail.com</a>
+                  <a href="mailto:orko.pmo.bulipe@gmail.com?subject=Privacy Inquiry">orko@mobinspect.com</a>
                 </li>
                 <li>
                   <strong>Press:</strong>
-                  <a href="mailto:orko.pmo.bulipe@gmail.com">orko.pmo.bulipe@gmail.com</a>
+                  <a href="mailto:orko.pmo.bulipe@gmail.com?subject=Press Inquiry">orko@mobinspect.com</a>
                 </li>
               </ul>
-            </div>
+            </div> -->
 
             <div style="margin: var(--spacing-md) 0;">
               <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Social Media</h4>
@@ -274,16 +293,17 @@
             <li><strong>Research Partnerships:</strong> Collaborate on security research</li>
             <li><strong>Enterprise Solutions:</strong> Custom deployment for organizations</li>
           </ul>
-          <a href="mailto:orko.pmo.bulipe@gmail.com" class="btn btn-primary" style="margin-top: var(--spacing-md);">
+          <a href="mailto:orko.pmo.bulipe@gmail.com?subject=Business Inquiry" class="btn btn-primary" style="margin-top: var(--spacing-md);">
             Contact Business Team
           </a>
         </div>
         <div>
           <!-- IMAGE PROMPT: A professional business handshake illustration with digital/cyber elements. Show two hands meeting with data streams and security icons flowing around them. Dark theme with cyan and purple accents. Modern, corporate yet futuristic style. Size: 500x400px -->
-          <div class="image-placeholder">
+          <img src="assets/images/business-handshake.png" alt="Business Partnership" style="width: 100%; border-radius: var(--radius-md);">
+          <!-- <div class="image-placeholder">
             <div class="image-placeholder-icon">🤝</div>
             <p><strong>IMAGE PROMPT:</strong> Professional business handshake with digital/cyber elements, data streams, and security icons. Dark theme with cyan/purple accents. Corporate futuristic style. Size: 500x400px</p>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -298,7 +318,7 @@
             <img src="assets/images/logo.png" alt="MobInspect" class="logo-img">
             <span>MobInspect</span>
           </a>
-          <p>Offline APK Security Analyzer. Surpass MobSF with on-device AI-powered threat detection.</p>
+          <p>Advanced Offline APK Security Analyzer with on-device AI-powered threat detection.</p>
         </div>
 
         <div class="footer-column">
@@ -323,15 +343,13 @@
         <div class="footer-column">
           <h4>Contact</h4>
           <ul class="footer-links">
-            <li><a href="mailto:orko.pmo.bulipe@gmail.com">orko.pmo.bulipe@gmail.com</a></li>
-            <li><a href="mailto:orko.pmo.bulipe@gmail.com">orko.pmo.bulipe@gmail.com</a></li>
-            <li><a href="mailto:orko.pmo.bulipe@gmail.com">orko.pmo.bulipe@gmail.com</a></li>
+            <li><a href="mailto:orko.pmo.bulipe@gmail.com?subject=General Inquiry">orko@mobinspect.com</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2024 MobInspect. All rights reserved.</p>
+        <p>&copy; 2026 MobInspect. All rights reserved.</p>
         <div class="social-links">
           <a href="#" aria-label="Twitter">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">

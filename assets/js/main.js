@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQ();
   initAnimations();
   initCounters();
+  initComingSoon();
+  initContactForm();
 });
 
 // ============================================
@@ -18,6 +20,8 @@ function initNavbar() {
   const navbar = document.querySelector('.navbar');
   if (!navbar) return;
 
+  // Check if navbar should always be scrolled (inner pages)
+  const isInnerPage = navbar.classList.contains('scrolled');
   let lastScroll = 0;
 
   window.addEventListener('scroll', () => {
@@ -26,7 +30,8 @@ function initNavbar() {
     // Add scrolled class when page is scrolled
     if (currentScroll > 50) {
       navbar.classList.add('scrolled');
-    } else {
+    } else if (!isInnerPage) {
+      // Only remove scrolled class on home page
       navbar.classList.remove('scrolled');
     }
 
@@ -109,8 +114,8 @@ function initFAQ() {
 // ============================================
 function initAnimations() {
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.05,
+    rootMargin: '0px 0px -20px 0px'
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -127,11 +132,26 @@ function initAnimations() {
     '.feature-card, .step, .stat-item, .team-member, .content-card'
   );
 
-  animatableElements.forEach((el, index) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-    observer.observe(el);
+  // Group elements by their parent section for stagger effect within sections only
+  const sections = new Map();
+  animatableElements.forEach(el => {
+    const section = el.closest('section') || el.closest('.container') || document.body;
+    if (!sections.has(section)) {
+      sections.set(section, []);
+    }
+    sections.get(section).push(el);
+  });
+
+  // Apply animations with faster timing and section-based stagger
+  sections.forEach(elements => {
+    elements.forEach((el, index) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      // Faster animation (0.3s) with minimal stagger (0.03s) capped at 0.15s max delay
+      const delay = Math.min(index * 0.03, 0.15);
+      el.style.transition = `opacity 0.3s ease ${delay}s, transform 0.3s ease ${delay}s`;
+      observer.observe(el);
+    });
   });
 }
 
@@ -207,53 +227,70 @@ function animateCounter(element) {
 // Form Validation & Submission
 // ============================================
 function initContactForm() {
-  const form = document.querySelector('.contact-form form');
+  // Check for success parameter (after FormSubmit redirect)
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === 'true') {
+    showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
+    // Clean up URL
+    window.history.replaceState({}, document.title, window.location.pathname);
+  }
+
+  const form = document.querySelector('.contact-form');
   if (!form) return;
 
+  // Add visual feedback on form submission
   form.addEventListener('submit', (e) => {
-    e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.innerHTML = '<span style="display: inline-flex; align-items: center; gap: 0.5rem;">Sending... <span class="spinner"></span></span>';
+      submitBtn.disabled = true;
+    }
+  });
 
-    // Get form data
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-
-    // Simple validation
-    let isValid = true;
-    const inputs = form.querySelectorAll('input[required], textarea[required]');
-
-    inputs.forEach(input => {
+  // Add validation styling
+  const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
+  inputs.forEach(input => {
+    input.addEventListener('blur', () => {
       if (!input.value.trim()) {
-        isValid = false;
         input.style.borderColor = 'var(--danger)';
       } else {
-        input.style.borderColor = 'var(--border-color)';
+        input.style.borderColor = 'var(--success)';
       }
     });
 
-    // Email validation
-    const emailInput = form.querySelector('input[type="email"]');
-    if (emailInput && emailInput.value) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(emailInput.value)) {
-        isValid = false;
-        emailInput.style.borderColor = 'var(--danger)';
+    input.addEventListener('input', () => {
+      if (input.value.trim()) {
+        input.style.borderColor = 'var(--success)';
       }
-    }
-
-    if (isValid) {
-      // Show success message (in real implementation, send to server)
-      showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
-      form.reset();
-    } else {
-      showNotification('Please fill in all required fields correctly.', 'error');
-    }
+    });
   });
 }
+
+// Add spinner styles
+const spinnerStyle = document.createElement('style');
+spinnerStyle.textContent = `
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+`;
+document.head.appendChild(spinnerStyle);
 
 // ============================================
 // Notification System
 // ============================================
 function showNotification(message, type = 'info') {
+  // Remove existing notification of same type
+  const existing = document.querySelector('.notification');
+  if (existing) existing.remove();
+
   const notification = document.createElement('div');
   notification.className = `notification notification-${type}`;
   notification.innerHTML = `
@@ -268,7 +305,7 @@ function showNotification(message, type = 'info') {
     styles.textContent = `
       .notification {
         position: fixed;
-        bottom: 20px;
+        top: 100px;
         right: 20px;
         padding: 1rem 1.5rem;
         background: var(--bg-card);
@@ -278,11 +315,15 @@ function showNotification(message, type = 'info') {
         align-items: center;
         gap: 1rem;
         z-index: 9999;
-        animation: slideIn 0.3s ease;
+        animation: slideInTop 0.3s ease;
         max-width: 400px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
       }
-      .notification-success { border-color: var(--success); }
-      .notification-error { border-color: var(--danger); }
+      .notification-success { border-color: var(--success); background: rgba(0, 255, 136, 0.1); }
+      .notification-error { border-color: var(--danger); background: rgba(255, 51, 102, 0.1); }
+      .notification-warning { border-color: var(--warning); background: rgba(255, 184, 0, 0.1); }
+      .notification-info { border-color: var(--primary); background: rgba(0, 245, 255, 0.1); }
       .notification-close {
         background: none;
         border: none;
@@ -292,9 +333,16 @@ function showNotification(message, type = 'info') {
         padding: 0;
         line-height: 1;
       }
-      @keyframes slideIn {
-        from { transform: translateX(100%); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
+      .notification-close:hover {
+        color: var(--text-primary);
+      }
+      @keyframes slideInTop {
+        from { transform: translateY(-100%); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+      @keyframes slideOutTop {
+        from { transform: translateY(0); opacity: 1; }
+        to { transform: translateY(-100%); opacity: 0; }
       }
     `;
     document.head.appendChild(styles);
@@ -304,16 +352,45 @@ function showNotification(message, type = 'info') {
 
   // Close button
   notification.querySelector('.notification-close').addEventListener('click', () => {
-    notification.remove();
+    notification.style.animation = 'slideOutTop 0.3s ease forwards';
+    setTimeout(() => notification.remove(), 300);
   });
 
-  // Auto remove after 5 seconds
+  // Auto remove after 4 seconds
   setTimeout(() => {
     if (notification.parentElement) {
-      notification.style.animation = 'slideIn 0.3s ease reverse';
+      notification.style.animation = 'slideOutTop 0.3s ease forwards';
       setTimeout(() => notification.remove(), 300);
     }
-  }, 5000);
+  }, 4000);
+}
+
+// ============================================
+// Coming Soon Handler for Placeholder Links
+// ============================================
+function initComingSoon() {
+  // Select all links with href="#" that are not anchor scroll links
+  const placeholderLinks = document.querySelectorAll('a[href="#"]:not([href^="#download"]):not([href^="#features"])');
+
+  placeholderLinks.forEach(link => {
+    // Skip links that have meaningful IDs/anchors
+    const href = link.getAttribute('href');
+    if (href && href.length > 1) return;
+
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      showNotification('Coming Soon! This feature is under development.', 'warning');
+    });
+  });
+
+  // Also handle social media links that are placeholders
+  const socialLinks = document.querySelectorAll('.social-links a[href="#"]');
+  socialLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      showNotification('Social media links coming soon!', 'warning');
+    });
+  });
 }
 
 // ============================================
@@ -343,7 +420,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ============================================
 function highlightActiveNavLink() {
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
+  // Only select anchor links (starting with #) for scroll highlighting
+  const anchorLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+  // Don't run on subpages - only on home page
+  if (window.location.pathname.includes('tutorial') ||
+      window.location.pathname.includes('help') ||
+      window.location.pathname.includes('about') ||
+      window.location.pathname.includes('contact') ||
+      window.location.pathname.includes('privacy')) {
+    return;
+  }
 
   window.addEventListener('scroll', () => {
     let current = '';
@@ -356,7 +443,8 @@ function highlightActiveNavLink() {
       }
     });
 
-    navLinks.forEach(link => {
+    // Only modify anchor links, not page links
+    anchorLinks.forEach(link => {
       link.classList.remove('active');
       if (link.getAttribute('href') === `#${current}`) {
         link.classList.add('active');

@@ -3,15 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MobInspect - Offline APK Security Analyzer. Surpass MobSF with on-device AI-powered threat detection. Scan Android apps for malware, vulnerabilities, and privacy threats.">
-  <meta name="keywords" content="mobile security, APK scanner, malware detection, Android security, AI security, app scanner">
+  <meta name="description" content="MobInspect - Advanced Offline APK Security Analyzer with on-device AI-powered threat detection. Scan Android apps for malware, vulnerabilities, and privacy threats.">
+  <meta name="keywords" content="mobile security, APK scanner, malware detection, Android security, AI security, app scanner, offline scanner, privacy protection">
   <meta name="author" content="MobInspect Team">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://orkoms2.github.io/mobinspect-web/">
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://orkoms2.github.io/mobinspect-web/">
   <meta property="og:title" content="MobInspect - AI-Powered Mobile Security Scanner">
-  <meta property="og:description" content="Offline APK Security Analyzer. Surpass MobSF with on-device AI-powered threat detection for Android apps.">
+  <meta property="og:description" content="Advanced Offline APK Security Analyzer with on-device AI-powered threat detection for Android apps.">
   <meta property="og:image" content="assets/images/og-image.png">
+  <meta property="og:site_name" content="MobInspect">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MobInspect - AI-Powered Mobile Security Scanner">
+  <meta name="twitter:description" content="Offline APK Security Analyzer with on-device AI-powered threat detection.">
+  <meta name="twitter:image" content="assets/images/og-image.png">
 
   <title>MobInspect - AI-Powered Mobile Security Scanner</title>
 
@@ -25,6 +36,24 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MobInspect",
+    "operatingSystem": "Android",
+    "applicationCategory": "SecurityApplication",
+    "description": "Offline APK Security Analyzer with AI-powered threat detection",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
 </head>
 <body>
   <!-- Animated Background Orbs -->
@@ -41,8 +70,16 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#how-it-works">How It Works</a></li>
+        <li class="nav-dropdown">
+          <a href="index.html">Home</a>
+          <div class="dropdown-menu">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#ai-analysis">AI Technology</a>
+            <a href="index.html#how-it-works">How It Works</a>
+            <a href="index.html#comparison">Compare</a>
+          </div>
+        </li>
+        <li><a href="tutorial.html">Tutorial</a></li>
         <li><a href="help.html">Help</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -67,7 +104,7 @@
           </div>
           <h1>Protect Your Mobile World</h1>
           <p class="hero-description">
-            Offline APK Security Analyzer that surpasses MobSF with on-device AI-powered threat detection. Our 3-layer AI engine scans, analyzes, and protects your Android device from malware, vulnerabilities, and privacy threats.
+            Advanced Offline APK Security Analyzer with on-device AI-powered threat detection. Our 3-layer AI engine scans, analyzes, and protects your Android device from malware, vulnerabilities, and privacy threats.
           </p>
           <div class="hero-buttons">
             <a href="#download" class="btn btn-primary">
@@ -98,6 +135,7 @@
               </div>
 
               <!-- IMAGE PROMPT: A futuristic mobile app interface screenshot showing a security scan in progress. Dark theme with cyan/teal accent colors. Display a circular progress indicator at 67%, scanning animation effects, and a list of security checks being performed (permissions, code analysis, network behavior). Include subtle glowing effects and modern UI elements. Size: 280x560px -->
+              <img src="assets/images/hero-phone-scan.png" alt="MobInspect Security Scan Interface" style="width: 100%; height: 100%; object-fit: cover; border-radius: 32px;">
               <div class="image-placeholder" style="height: 100%; border: none; background: linear-gradient(180deg, #0a0a0f 0%, #1a1a25 50%, #0a0a0f 100%);">
                 <div class="image-placeholder-icon">📱</div>
                 <p><strong>IMAGE PROMPT:</strong> Futuristic mobile app interface showing security scan at 67% progress. Dark theme with cyan accents, circular progress indicator, scanning animations, and list of security checks. Size: 280x560px</p>
@@ -114,20 +152,20 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item">
-          <div class="stat-number">50K+</div>
-          <div class="stat-label">Apps Scanned</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">99%</div>
-          <div class="stat-label">Detection Rate</div>
+          <div class="stat-number">40+</div>
+          <div class="stat-label">Vulnerability Patterns</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">3</div>
           <div class="stat-label">AI Detection Layers</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">10K+</div>
-          <div class="stat-label">Protected Users</div>
+          <div class="stat-number">11</div>
+          <div class="stat-label">Analysis Tabs</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Export Formats</div>
         </div>
       </div>
     </div>
@@ -147,63 +185,126 @@
         <div class="feature-card">
           <div class="feature-icon">🧠</div>
           <h3>3-Layer AI Detection Engine</h3>
-          <p>Our proprietary detection system combines Machine Learning, Rule-Based Analysis, and Heuristic Scanning to identify even the most sophisticated threats with unprecedented accuracy.</p>
+          <p>Our proprietary detection system combines Machine Learning (TensorFlow Lite), Rule-Based signature matching, and Heuristic Scanning to identify even the most sophisticated threats with explainable verdicts.</p>
         </div>
 
         <!-- Feature 2: Real-Time Scanning -->
         <div class="feature-card">
           <div class="feature-icon">⚡</div>
-          <h3>Lightning-Fast Scanning</h3>
-          <p>Scan any APK file in seconds. Our optimized engine runs in a separate isolate to ensure your device stays responsive while performing deep analysis.</p>
+          <h3>Adaptive Scanning Modes</h3>
+          <p>Intelligent scan mode selection based on APK size - Full, Medium, or Light scan. Runs in isolated processes to keep your device responsive during deep analysis.</p>
         </div>
 
         <!-- Feature 3: Permission Analysis -->
         <div class="feature-card">
           <div class="feature-icon">🔐</div>
           <h3>Deep Permission Analysis</h3>
-          <p>Understand exactly what each app can access. We analyze dangerous permissions and provide clear explanations of potential privacy risks.</p>
+          <p>Analyze 60+ Android permissions with risk classification. Identify dangerous permission combinations and get clear explanations of privacy implications.</p>
         </div>
 
         <!-- Feature 4: Malware Detection -->
         <div class="feature-card">
           <div class="feature-icon">🦠</div>
-          <h3>Malware & Spyware Detection</h3>
-          <p>Identify trojans, ransomware, spyware, adware, and other malicious software before they can harm your device or steal your data.</p>
+          <h3>Comprehensive Malware Detection</h3>
+          <p>Detect trojans, ransomware, spyware, adware using 40+ signature patterns. ML-based behavioral analysis catches zero-day threats before they're catalogued.</p>
         </div>
 
         <!-- Feature 5: Code Analysis -->
         <div class="feature-card">
           <div class="feature-icon">🔬</div>
           <h3>Static Code Analysis</h3>
-          <p>Deep inspection of app components, services, receivers, and activities. Detect hidden behaviors and suspicious code patterns automatically.</p>
+          <p>Detect hardcoded secrets, SQL injection, insecure WebViews, weak cryptography, and 30+ vulnerability patterns. All findings mapped to CWE/OWASP standards.</p>
         </div>
 
         <!-- Feature 6: Privacy Score -->
         <div class="feature-card">
           <div class="feature-icon">📊</div>
-          <h3>Comprehensive Risk Scoring</h3>
-          <p>Get an instant security score from 0-100 with detailed breakdowns. Understand the exact risk level of any app before installation.</p>
+          <h3>Risk Scoring (A-F Grades)</h3>
+          <p>Get an instant security score from 0-100 with letter grades. 11 detailed analysis tabs covering every security aspect of your apps.</p>
         </div>
 
-        <!-- Feature 7: Background Scanning -->
+        <!-- Feature 7: Tracker Detection -->
+        <div class="feature-card">
+          <div class="feature-icon">👁️</div>
+          <h3>Tracker & Analytics Detection</h3>
+          <p>Identify embedded tracking SDKs - Google Analytics, Firebase, Facebook, Adjust, and more. Know exactly who's collecting your data.</p>
+        </div>
+
+        <!-- Feature 8: Certificate Analysis -->
+        <div class="feature-card">
+          <div class="feature-icon">📜</div>
+          <h3>Certificate Chain Analysis</h3>
+          <p>Full X.509 certificate validation, signature scheme verification (v1, v2, v3), weak algorithm detection, and certificate fingerprint comparison.</p>
+        </div>
+
+        <!-- Feature 9: Privacy Leak Detection -->
+        <div class="feature-card">
+          <div class="feature-icon">🔓</div>
+          <h3>Privacy Leak Detection</h3>
+          <p>Detect IMEI access, location tracking, contact access, clipboard monitoring, and sensitive data logging. Protect your personal information.</p>
+        </div>
+
+        <!-- Feature 10: Multi-Format Export -->
+        <div class="feature-card">
+          <div class="feature-icon">📤</div>
+          <h3>Multi-Format Export</h3>
+          <p>Export reports in PDF, JSON, CSV, and SARIF formats. SARIF v2.1.0 support enables CI/CD integration with GitHub and Azure DevOps.</p>
+        </div>
+
+        <!-- Feature 11: Report Comparison -->
+        <div class="feature-card">
+          <div class="feature-icon">⚖️</div>
+          <h3>Report Comparison</h3>
+          <p>Compare two APK scans side-by-side. Track permission changes, security improvements, and detect signing key modifications between versions.</p>
+        </div>
+
+        <!-- Feature 12: SBOM Generation -->
+        <div class="feature-card">
+          <div class="feature-icon">📦</div>
+          <h3>SBOM Generation</h3>
+          <p>Generate Software Bill of Materials for compliance. Identify all third-party libraries and dependencies used in the application.</p>
+        </div>
+
+        <!-- Feature 13: Decompilation -->
+        <div class="feature-card">
+          <div class="feature-icon">💻</div>
+          <h3>Decompilation & Source View</h3>
+          <p>Browse DEX classes, explore package hierarchy, and view Smali bytecode. Search and inspect methods for deeper investigation.</p>
+        </div>
+
+        <!-- Feature 14: Background Scanning -->
         <div class="feature-card">
           <div class="feature-icon">🔄</div>
-          <h3>Background Processing</h3>
-          <p>Scans continue even when the app is minimized or your screen is off. Get notified instantly when analysis is complete.</p>
+          <h3>Foreground Service Scanning</h3>
+          <p>Scans continue even when app is minimized or screen is off. Real-time progress in status bar notification with ETA calculation.</p>
         </div>
 
-        <!-- Feature 8: Offline Capable -->
+        <!-- Feature 15: Offline Capable -->
         <div class="feature-card">
           <div class="feature-icon">📴</div>
-          <h3>Offline Capable</h3>
-          <p>No internet required for basic scans. Our AI models run entirely on-device, ensuring your data never leaves your phone.</p>
+          <h3>100% Offline Analysis</h3>
+          <p>All analysis runs entirely on-device using TensorFlow Lite. No internet required, no data uploaded - complete privacy protection.</p>
         </div>
 
-        <!-- Feature 9: Detailed Reports -->
+        <!-- Feature 16: OFAC Compliance -->
         <div class="feature-card">
-          <div class="feature-icon">📋</div>
-          <h3>Detailed Security Reports</h3>
-          <p>Save and review comprehensive scan reports. Track the security status of all your apps with our intuitive report management system.</p>
+          <div class="feature-icon">🌍</div>
+          <h3>OFAC Compliance Check</h3>
+          <p>Detect communication with OFAC-sanctioned countries. Ensure your apps comply with international sanctions regulations.</p>
+        </div>
+
+        <!-- Feature 17: Native Library Analysis -->
+        <div class="feature-card">
+          <div class="feature-icon">⚙️</div>
+          <h3>Native Library Analysis</h3>
+          <p>Analyze .so files for debug symbols, suspicious patterns, and known CVEs. Complete visibility into native code components.</p>
+        </div>
+
+        <!-- Feature 18: Network Security -->
+        <div class="feature-card">
+          <div class="feature-icon">🌐</div>
+          <h3>Network Security Analysis</h3>
+          <p>Analyze network security configurations, SSL pinning implementation, cleartext traffic settings, and discovered endpoints.</p>
         </div>
       </div>
     </div>
@@ -226,10 +327,12 @@
             <p>Choose any APK file from your device or browse installed applications. MobInspect can analyze any Android application regardless of its source.</p>
 
             <!-- IMAGE PROMPT: A modern UI showing a file selection interface with APK files listed. Dark theme with subtle grid background. Show file icons, app names, file sizes, and a glowing "Select" button. Include a search bar and filter options. Size: 600x400px -->
-            <div class="image-placeholder">
+            <img src="assets/images/step1-file-selection.png" alt="APK File Selection Interface" style="width: 100%; border-radius: var(--radius-md);">
+              <!-- <img src="assets/images/2.jpg" alt="APK File Selection Interface" style="width: 100%; border-radius: var(--radius-md);"> -->
+            <!-- <div class="image-placeholder">
               <div class="image-placeholder-icon">📂</div>
               <p><strong>IMAGE PROMPT:</strong> Modern dark-themed file selection UI showing APK files list with icons, names, sizes, search bar, and glowing "Select" button. Size: 600x400px</p>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -240,10 +343,12 @@
             <p>Our 3-layer detection engine performs comprehensive analysis: Machine Learning for pattern recognition, Rule-Based detection for known threats, and Heuristic analysis for suspicious behaviors.</p>
 
             <!-- IMAGE PROMPT: A futuristic visualization of AI analysis in progress. Show three interconnected neural network-style layers labeled ML, Rules, and Heuristic. Include scanning beams, data flow animations, and a progress bar. Dark background with cyan and purple glowing elements. Size: 600x400px -->
-            <div class="image-placeholder">
+            <img src="assets/images/step2-ai-analysis.png" alt="AI Analysis Visualization" style="width: 100%; border-radius: var(--radius-md);">
+             <!-- <img src="assets/images/3.png" alt="AI Analysis Visualization" style="width: 100%; border-radius: var(--radius-md);"> -->
+            <!-- <div class="image-placeholder">
               <div class="image-placeholder-icon">🔍</div>
               <p><strong>IMAGE PROMPT:</strong> Futuristic AI analysis visualization with three neural network layers (ML, Rules, Heuristic), scanning beams, data flow, progress bar. Dark theme with cyan/purple glow. Size: 600x400px</p>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -254,10 +359,12 @@
             <p>Receive a comprehensive security report with risk scores, detected threats, permission analysis, and actionable recommendations. Save reports for future reference.</p>
 
             <!-- IMAGE PROMPT: A sleek security report dashboard showing a risk score gauge (displaying 23/100 as safe), threat summary cards, permission breakdown chart, and recommendation list. Dark futuristic theme with green/cyan indicating safe status. Size: 600x400px -->
-            <div class="image-placeholder">
+            <img src="assets/images/step3-security-report.png" alt="Security Report Dashboard" style="width: 100%; border-radius: var(--radius-md);">
+            <!-- <img src="assets/images/4.png" alt="Security Report Dashboard" style="width: 100%; border-radius: var(--radius-md);"> -->
+            <!-- <div class="image-placeholder">
               <div class="image-placeholder-icon">📊</div>
               <p><strong>IMAGE PROMPT:</strong> Security report dashboard with risk score gauge (23/100), threat summary cards, permission chart, recommendations. Dark theme with green/cyan safe indicators. Size: 600x400px</p>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -310,6 +417,187 @@
     </div>
   </section>
 
+  <!-- Comparison Table Section -->
+  <section class="features" id="comparison">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why MobInspect?</span>
+        <h2>Compare with Other Solutions</h2>
+        <p>See how MobInspect stacks up against other mobile security analysis tools</p>
+      </div>
+
+      <div class="content-card" style="overflow-x: auto;">
+        <table style="width: 100%; min-width: 1000px; border-collapse: collapse;">
+          <thead>
+            <tr style="background: var(--bg-tertiary);">
+              <th style="padding: 1rem; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Feature</th>
+              <th style="padding: 1rem; text-align: center; border: 1px solid var(--border-color); background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(178, 75, 243, 0.1));">
+                <span style="color: var(--primary); font-weight: 700;">MobInspect</span>
+              </th>
+              <th style="padding: 1rem; text-align: center; border: 1px solid var(--border-color);">MobSF</th>
+              <th style="padding: 1rem; text-align: center; border: 1px solid var(--border-color);">Androguard</th>
+              <th style="padding: 1rem; text-align: center; border: 1px solid var(--border-color);">APK Analyzer</th>
+              <th style="padding: 1rem; text-align: center; border: 1px solid var(--border-color);">VirusTotal</th>
+              <th style="padding: 1rem; text-align: center; border: 1px solid var(--border-color);">Koodous</th>
+            </tr>
+          </thead>
+          <tbody style="color: var(--text-secondary);">
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">100% Offline Analysis</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">On-Device ML Detection</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">3-Layer Detection Engine</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Mobile App (Android)</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">No Setup Required</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">No Data Upload Required</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Security Vulnerability Detection</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Certificate Chain Analysis</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center;">Basic</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Tracker Detection</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <!-- <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">SARIF Export (CI/CD)</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr> -->
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Report Comparison</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">CWE/OWASP Mapping</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">OFAC Compliance Check</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Decompilation/Source View</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Non-Technical User Friendly</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center;">Moderate</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Free to Use</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center;">Limited</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top: var(--spacing-md); text-align: center;">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          * Comparison based on publicly available features. MobSF requires Docker/server setup; Androguard requires Python programming; APK Analyzer requires Android Studio; VirusTotal and Koodous require internet and file upload.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Section -->
   <section class="cta" id="download">
     <div class="container">
@@ -357,7 +645,7 @@
             <img src="assets/images/logo.png" alt="MobInspect" class="logo-img">
             <span>MobInspect</span>
           </a>
-          <p>Offline APK Security Analyzer. Surpass MobSF with on-device AI-powered threat detection.</p>
+          <p>Advanced Offline APK Security Analyzer with on-device AI-powered threat detection.</p>
         </div>
 
         <div class="footer-column">
@@ -365,8 +653,9 @@
           <ul class="footer-links">
             <li><a href="#features">Features</a></li>
             <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#download">Download</a></li>
             <li><a href="#ai-analysis">AI Technology</a></li>
+            <li><a href="#comparison">Compare</a></li>
+            <li><a href="#download">Download</a></li>
           </ul>
         </div>
 
@@ -392,7 +681,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2024 MobInspect. All rights reserved.</p>
+        <p>&copy; 2026 MobInspect. All rights reserved.</p>
         <div class="social-links">
           <a href="#" aria-label="Twitter">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="MobInspect Tutorial - Learn how to use MobInspect to scan APK files, compare reports, and export security findings.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://orkoms2.github.io/mobinspect-web/tutorial.html">
+
+  <title>Tutorial - MobInspect</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/tutorial.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+</head>
+
+<body>
+  <!-- Particle Background -->
+  <div class="particle-container" id="particles"></div>
+
+  <!-- Animated Background Orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="MobInspect" class="logo-img">
+        <span>MobInspect</span>
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="index.html">Home</a>
+          <div class="dropdown-menu">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#ai-analysis">AI Technology</a>
+            <a href="index.html#how-it-works">How It Works</a>
+            <a href="index.html#comparison">Compare</a>
+          </div>
+        </li>
+        <li><a href="tutorial.html" class="active">Tutorial</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#download" class="nav-cta">Download</a></li>
+      </ul>
+
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Holographic Page Header -->
+  <header class="holo-header">
+    <div class="holo-grid"></div>
+    <div class="scan-line-overlay"></div>
+    <div class="container" style="position: relative; z-index: 1; text-align: center;">
+      <span class="section-tag tutorial-cyber-text">Interactive Guide</span>
+      <div class="glitch-container">
+        <h1 class="glitch-text tutorial-cyber-text" data-text="TUTORIAL">TUTORIAL</h1>
+      </div>
+      <p style="max-width: 600px; margin: var(--spacing-md) auto 0;">
+        Master MobInspect's powerful security scanning features with our comprehensive step-by-step guide.
+      </p>
+    </div>
+  </header>
+
+  <!-- Video Tutorial Section -->
+  <section class="content-section" id="video">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Video Guide</span>
+        <h2 class="tutorial-cyber-text">Watch How It Works</h2>
+        <p>Get started quickly with our comprehensive video tutorial</p>
+      </div>
+
+      <div class="cyber-video-frame" id="videoFrame">
+      <div class="video-container">
+        <iframe 
+          id="youtube-video" 
+          src="https://www.youtube.com/embed/5djyMRPC2JE?rel=0&modestbranding=1&playsinline=1" 
+          title="MobInspect Tutorial" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+      <p style="text-align: center; margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">
+        Click to play the tutorial video
+      </p>
+    </div>
+  </section>
+
+  <div class="cyber-divider"></div>
+
+  <!-- Scan Process Section -->
+  <section class="content-section" id="scan-process"
+    style="background: var(--bg-secondary); position: relative; overflow: hidden;">
+    <div class="data-stream" id="dataStream"></div>
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="section-header">
+        <span class="section-tag">Step by Step</span>
+        <h2 class="tutorial-cyber-text">The Scan Process</h2>
+        <p>Follow these steps to scan any APK file for security threats</p>
+      </div>
+
+      <!-- Step 1: Select APK -->
+      <div class="tutorial-step" data-step="1">
+        <div class="tutorial-step-content">
+          <div class="cyber-badge">01</div>
+          <h3 class="tutorial-cyber-text">Select Your APK File</h3>
+          <p>Launch MobInspect and tap the scan button on the home screen. You have three options to select an APK:</p>
+          <ul>
+            <li><strong>Browse Files:</strong> Navigate to an APK file stored on your device</li>
+            <li><strong>Installed Apps:</strong> Select from apps already installed on your phone</li>
+            <li><strong>Recent Downloads:</strong> Quick access to recently downloaded APK files</li>
+          </ul>
+          <div class="neon-card" style="margin-top: 1rem; padding: 1rem;">
+            <strong style="color: var(--primary);">Pro Tip:</strong> You can scan any APK file regardless of where it
+            came from - app stores, direct downloads, or shared files.
+          </div>
+        </div>
+        <div class="tutorial-step-image">
+          <div class="image-3d-wrapper">
+            <img src="assets/images/tutorial-step1-home-screen.png" alt="MobInspect Home Screen with Scan Options"
+              style="width: 100%; border-radius: var(--radius-md);">
+            <!-- <div class="cyber-placeholder">
+              <div class="cyber-icon">📱</div>
+              <p style="color: var(--text-muted);"><strong>Screenshot:</strong> Home screen with scan options</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="step-connector"></div>
+
+      <!-- Step 2: Scanning -->
+      <div class="tutorial-step reverse" data-step="2">
+        <div class="tutorial-step-content">
+          <div class="cyber-badge">02</div>
+          <h3 class="tutorial-cyber-text">AI-Powered Analysis</h3>
+          <p>Once you select an APK, MobInspect's 3-layer AI detection engine begins analyzing:</p>
+          <ul>
+            <li><strong>Machine Learning:</strong> Pattern recognition using neural networks</li>
+            <li><strong>Rule-Based:</strong> Known malware signature matching</li>
+            <li><strong>Heuristic:</strong> Behavioral analysis for unknown threats</li>
+          </ul>
+          <div class="neon-card" style="margin-top: 1rem; padding: 1rem; border-left: 3px solid var(--accent);">
+            <strong style="color: var(--accent);">Background Scanning:</strong> Minimize the app while scanning - you'll
+            get a notification when complete!
+          </div>
+        </div>
+        <div class="tutorial-step-image">
+          <div class="image-3d-wrapper">
+            <img src="assets/images/tutorial-step2-scan-progress.png" alt="MobInspect Scan Progress Screen"
+              style="width: 100%; border-radius: var(--radius-md);">
+            <!-- <div class="cyber-placeholder">
+              <div class="cyber-icon">🔍</div>
+              <p style="color: var(--text-muted);"><strong>Screenshot:</strong> Scan progress screen</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="step-connector"></div>
+
+      <!-- Step 3: Review Results -->
+      <div class="tutorial-step" data-step="3">
+        <div class="tutorial-step-content">
+          <div class="cyber-badge">03</div>
+          <h3 class="tutorial-cyber-text">Review Security Results</h3>
+          <p>After the scan completes, you'll see a comprehensive security report:</p>
+          <ul>
+            <li><strong>Score Tab:</strong> Overall risk score (0-100) with color-coded indicator</li>
+            <li><strong>AI Analysis:</strong> Detailed scores from all three detection layers</li>
+            <li><strong>Permissions:</strong> Analysis of requested permissions and risks</li>
+            <li><strong>Malware:</strong> Detected threats and suspicious indicators</li>
+            <li><strong>Privacy:</strong> Privacy leaks and tracker detection</li>
+          </ul>
+        </div>
+        <div class="tutorial-step-image">
+          <div class="image-3d-wrapper">
+            <img src="assets/images/tutorial-step3-results.png" alt="MobInspect Security Results with Risk Score"
+              style="width: 100%; border-radius: var(--radius-md);">
+            <!-- <div class="cyber-placeholder">
+              <div class="cyber-icon">📊</div>
+              <p style="color: var(--text-muted);"><strong>Screenshot:</strong> Results with risk score</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="step-connector"></div>
+
+      <!-- Step 4: Save Report -->
+      <div class="tutorial-step reverse" data-step="4">
+        <div class="tutorial-step-content">
+          <div class="cyber-badge">04</div>
+          <h3 class="tutorial-cyber-text">Save Your Report</h3>
+          <p>After reviewing the results, save the report for future reference:</p>
+          <ul>
+            <li>Tap the <strong>"Save Report"</strong> button to store locally</li>
+            <li>Reports are saved in the app's Reports section</li>
+            <li>Access saved reports anytime from the bottom navigation</li>
+            <li>Reports include all scan details and findings</li>
+          </ul>
+          <div class="neon-card" style="margin-top: 1rem; padding: 1rem; border-left: 3px solid var(--secondary);">
+            <strong style="color: var(--secondary);">Privacy First:</strong> All reports are stored locally - never
+            uploaded to any server.
+          </div>
+        </div>
+        <div class="tutorial-step-image">
+          <div class="image-3d-wrapper">
+            <img src="assets/images/tutorial-step4-save-report.png" alt="MobInspect Save Report Screen"
+              style="width: 100%; border-radius: var(--radius-md);">
+            <!-- <div class="cyber-placeholder">
+              <div class="cyber-icon">💾</div>
+              <p style="color: var(--text-muted);"><strong>Screenshot:</strong> Save report confirmation</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cyber-divider"></div>
+
+  <!-- Compare Reports Section -->
+  <section class="content-section" id="compare">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Advanced Feature</span>
+        <h2 class="tutorial-cyber-text">Compare Reports</h2>
+        <p>Compare security findings between different versions or apps</p>
+      </div>
+
+      <div class="neon-card">
+        <h3 class="tutorial-cyber-text">How to Compare Reports</h3>
+        <div class="tutorial-step visible" style="margin-bottom: 0; opacity: 1; transform: none;">
+          <div>
+            <ol style="padding-left: 1.5rem;">
+              <li style="margin-bottom: 1rem;">
+                <strong>Open Reports Screen:</strong> Navigate to the Reports tab
+              </li>
+              <li style="margin-bottom: 1rem;">
+                <strong>Enable Compare mode:</strong> Click the <strong>Icon</strong> on the Top-right corner<br>
+                <strong>Select Reports:</strong> Choose two reports to compare<br>
+                <strong>&nbsp&nbsp&nbspOR</strong><br>
+                <strong>Alternate:</strong> Tap & Hold a report to select<br>
+                <strong>Select Another Reports:</strong> Choose second report to compare<br>
+              </li>
+              <li style="margin-bottom: 1rem;">
+                <strong>Tap Compare:</strong> Click the "Compare" button on the Top
+              </li>
+              <li style="margin-bottom: 1rem;">
+                <strong>View Comparison:</strong> See side-by-side differences
+              </li>
+            </ol>
+          </div>
+          <div class="tutorial-step-image">
+            <img src="assets/images/tutorial-compare-reports.png" alt="MobInspect Compare Reports Side by Side"
+              style="width: 100%; border-radius: var(--radius-md);">
+            <!-- <div class="cyber-placeholder" style="min-height: 280px;">
+              <div class="cyber-icon">⚖️</div>
+              <p style="color: var(--text-muted);"><strong>Screenshot:</strong> Side-by-side comparison</p>
+            </div> -->
+          </div>
+        </div>
+
+        <h4 style="margin-top: 2rem;" class="tutorial-cyber-text">Use Cases</h4>
+        <div class="features-grid" style="margin-top: 1rem;">
+          <div class="holo-card">
+            <div class="holo-card-content">
+              <div class="feature-icon-animated">🔄</div>
+              <h4>App Updates</h4>
+              <p style="font-size: 0.9rem;">Compare old and new versions to see security changes</p>
+            </div>
+          </div>
+          <div class="holo-card">
+            <div class="holo-card-content">
+              <div class="feature-icon-animated">🆚</div>
+              <h4>Similar Apps</h4>
+              <p style="font-size: 0.9rem;">Compare two similar apps to choose the more secure option</p>
+            </div>
+          </div>
+          <div class="holo-card">
+            <div class="holo-card-content">
+              <div class="feature-icon-animated">📈</div>
+              <h4>Track Changes</h4>
+              <p style="font-size: 0.9rem;">Monitor how an app's security changes over time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cyber-divider"></div>
+
+  <!-- Export Reports Section -->
+  <section class="content-section" id="export" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Share & Archive</span>
+        <h2 class="tutorial-cyber-text">Export Reports</h2>
+        <p>Export your security findings in multiple formats</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="neon-card">
+          <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: var(--danger);">📄</span> PDF Export
+          </h3>
+          <p>Generate a professional PDF report perfect for:</p>
+          <ul>
+            <li>Sharing with team members</li>
+            <li>Including in security documentation</li>
+            <li>Printing for offline reference</li>
+            <li>Attaching to emails or tickets</li>
+          </ul>
+        </div>
+
+        <div class="neon-card">
+          <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: var(--warning);">📋</span> JSON Export
+          </h3>
+          <p>Export raw data in JSON format for:</p>
+          <ul>
+            <li>Integration with other security tools</li>
+            <li>Automated processing and analysis</li>
+            <li>Custom report generation</li>
+            <li>Data archival and backup</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cyber-divider"></div>
+
+  <!-- Tips & Best Practices -->
+  <section class="content-section" id="tips">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Pro Tips</span>
+        <h2 class="tutorial-cyber-text">Best Practices</h2>
+        <p>Get the most out of MobInspect with these tips</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="tip-card">
+          <span class="tip-number">01</span>
+          <div class="feature-icon-animated">🔄</div>
+          <h3>Scan Before Installing</h3>
+          <p>Always scan APK files from unknown sources before installing them on your device.</p>
+        </div>
+
+        <div class="tip-card">
+          <span class="tip-number">02</span>
+          <div class="feature-icon-animated">📊</div>
+          <h3>Understand Risk Scores</h3>
+          <p>A high score doesn't always mean malware. Review detailed findings to understand why.</p>
+        </div>
+
+        <div class="tip-card">
+          <span class="tip-number">03</span>
+          <div class="feature-icon-animated">📱</div>
+          <h3>Scan Installed Apps</h3>
+          <p>Periodically scan your installed apps to check for security issues after updates.</p>
+        </div>
+
+        <div class="tip-card">
+          <span class="tip-number">04</span>
+          <div class="feature-icon-animated">💾</div>
+          <h3>Save Important Reports</h3>
+          <p>Save reports for apps you use frequently so you can compare when they update.</p>
+        </div>
+
+        <div class="tip-card">
+          <span class="tip-number">05</span>
+          <div class="feature-icon-animated">🔍</div>
+          <h3>Check Permissions</h3>
+          <p>Pay special attention to the Permissions tab - excessive permissions indicate risks.</p>
+        </div>
+
+        <div class="tip-card">
+          <span class="tip-number">06</span>
+          <div class="feature-icon-animated">📤</div>
+          <h3>Export for Records</h3>
+          <p>Export PDF reports for important apps as documentation for compliance or auditing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-content">
+          <h2 class="tutorial-cyber-text">Ready to Start Scanning?</h2>
+          <p>Download MobInspect now and protect your device from malicious apps.</p>
+          <div class="hero-buttons" style="justify-content: center;">
+            <a href="index.html#download" class="btn btn-primary">Download Now</a>
+            <a href="help.html" class="btn btn-secondary">Need Help?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="MobInspect" class="logo-img">
+            <span>MobInspect</span>
+          </a>
+          <p>Advanced Offline APK Security Analyzer with on-device AI-powered threat detection.</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Product</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#download">Download</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Learn</h4>
+          <ul class="footer-links">
+            <li><a href="tutorial.html" class="active">Tutorial</a></li>
+            <li><a href="tutorial.html#scan-process">Scan Process</a></li>
+            <li><a href="tutorial.html#compare">Compare Reports</a></li>
+            <li><a href="tutorial.html#export">Export Reports</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="help.html">Help Center</a></li>
+            <li><a href="help.html#faq">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 MobInspect. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tutorial.js"></script>
+
+</body>
+
+</html>
