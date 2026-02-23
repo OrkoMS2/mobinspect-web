@@ -1560,6 +1560,141 @@ a:hover {
 }
 
 /* ============================================
+   Mobile Responsiveness Fixes
+   ============================================ */
+
+/* Fix: Homepage 3-Layer Detection Engine grid */
+@media (max-width: 1024px) {
+  #ai-analysis .features-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #ai-analysis .features-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Fix: Homepage CTA section - Ready to Secure Your Device */
+@media (max-width: 768px) {
+  .cta-box {
+    padding: var(--spacing-lg);
+  }
+
+  .cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .store-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .store-btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-box {
+    padding: var(--spacing-md);
+  }
+
+  .cta h2 {
+    font-size: 1.25rem;
+  }
+
+  .cta p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Fix: About Page Hero section (Mission section) */
+@media (max-width: 1024px) {
+  .content-section .hero-content {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-md) !important;
+  }
+
+  .content-section .hero-content > div:last-child {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-section .hero-content {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+
+  .content-section .hero-content .section-tag {
+    display: inline-block;
+  }
+}
+
+/* Fix: About Page Technology section */
+@media (max-width: 1024px) {
+  .content-section > .container > div[style*="grid-template-columns: 1fr 1fr"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-md) !important;
+  }
+}
+
+/* Fix: Contact Page - Send Us a Message, Other Ways sections */
+@media (max-width: 1024px) {
+  .content-section > .container > div[style*="display: grid"][style*="grid-template-columns: 1fr 1fr"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-md) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Contact form section */
+  .content-section > .container > div[style*="display: grid"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-md) !important;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .content-card h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Fix: Contact Page - Partnership & Business Inquiries */
+@media (max-width: 1024px) {
+  .content-section[style*="background: var(--bg-secondary)"] > .container > div[style*="display: grid"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-md) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-section[style*="background: var(--bg-secondary)"] > .container > div[style*="display: grid"] {
+    text-align: center;
+  }
+
+  .content-section[style*="background: var(--bg-secondary)"] ul {
+    text-align: left;
+    display: inline-block;
+  }
+
+  .content-section[style*="background: var(--bg-secondary)"] .btn {
+    display: inline-block;
+  }
+}
+
+/* ============================================
    Utilities
    ============================================ */
 .text-center { text-align: center; }

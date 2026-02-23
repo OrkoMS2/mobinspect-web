@@ -613,6 +613,20 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .tutorial-step {
+    grid-template-columns: 1fr;
+  }
+  .tutorial-step.reverse {
+    direction: ltr;
+  }
+
+  /* Fix: Compare Reports Use Cases section */
+  #compare .features-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 @media (max-width: 768px) {
   .tutorial-step {
     grid-template-columns: 1fr;
@@ -630,6 +644,53 @@
   }
   .cyber-icon {
     font-size: 3.5rem;
+  }
+
+  /* Fix: Compare Reports Use Cases - holo-cards */
+  #compare .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-sm) !important;
+  }
+
+  .holo-card {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .holo-card-content {
+    padding: var(--spacing-sm);
+  }
+
+  .holo-card h4 {
+    font-size: 1rem;
+  }
+
+  .holo-card p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Additional mobile fixes for tutorial page */
+  .neon-card {
+    padding: var(--spacing-md);
+  }
+
+  .neon-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .neon-card h4 {
+    font-size: 1rem;
+  }
+
+  #compare .features-grid {
+    gap: var(--spacing-xs) !important;
+  }
+
+  .feature-icon-animated {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
   }
 }
 
