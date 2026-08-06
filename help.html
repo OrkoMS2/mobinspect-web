@@ -121,9 +121,8 @@
         <h3>Step 2: Select an APK File</h3>
         <p>Tap the scan button on the home screen and choose how you want to select an APK:</p>
         <ul>
-          <li><strong>Browse Files:</strong> Navigate to an APK file on your device</li>
+          <li><strong>Browse Files:</strong> Navigate to an APK file stored on your device</li>
           <li><strong>Installed Apps:</strong> Select from apps already installed on your device</li>
-          <li><strong>Recent Downloads:</strong> Quick access to recently downloaded APK files</li>
         </ul>
 
         <h3>Step 3: Start the Scan</h3>
@@ -183,11 +182,14 @@
           <li>Access saved reports from the "Reports" tab in the app</li>
         </ul>
 
-        <h3>Sharing Reports</h3>
-        <p>Share scan results with others:</p>
+        <h3>Exporting & Sharing Reports</h3>
+        <p>Export and share scan results in multiple formats:</p>
         <ul>
-          <li>Tap the share icon on any report</li>
-          <li>Choose to share as text summary or full report</li>
+          <li><strong>PDF:</strong> Professional, human-readable security report</li>
+          <li><strong>JSON:</strong> Machine-readable structured data for integration</li>
+          <li><strong>SARIF:</strong> SARIF v2.1.0 for CI/CD tools (GitHub, Azure DevOps)</li>
+          <li><strong>CSV:</strong> Spreadsheet-compatible findings list</li>
+          <li>Combined exports available: PDF+JSON, PDF+SARIF, SARIF+CSV, CSV+JSON</li>
           <li>Share via messaging apps, email, or save to files</li>
         </ul>
 
@@ -199,6 +201,94 @@
           <li>Deleted reports cannot be recovered</li>
         </ul>
       </div>
+
+    <!-- Security Tools Guide -->
+      <div class="content-card">
+        <h2>Security Tools</h2>
+        <p>MobInspect includes several advanced security tools accessible from Settings &gt; Security Tools:</p>
+
+        <h3>Full Device Security Scan</h3>
+        <p>Batch-scan all installed apps on your device in one tap:</p>
+        <ul>
+          <li>Verifies install sources (Google Play, Samsung, Amazon, ADB, Unknown)</li>
+          <li>Detects sideloaded apps from unknown sources</li>
+          <li>Assigns risk scores and categories to every app</li>
+          <li>Shows a summary with flagged apps and device-level security grade</li>
+          <li>Tap any flagged app to run a detailed scan or extract its APK</li>
+        </ul>
+
+        <h3>Trusted Apps Vault</h3>
+        <p>Verify app integrity with SHA-256 checksum verification:</p>
+        <ul>
+          <li>After scanning an app, tap "Trust This Version" to save its checksum</li>
+          <li>Use "Verify All" to check all trusted apps against current installed versions</li>
+          <li>Get alerted instantly if an app has been modified or re-signed</li>
+          <li>Re-trust or remove trust for individual apps</li>
+        </ul>
+
+        <h3>Hidden Background Runners</h3>
+        <p>Detect apps running silently without a visible launcher icon:</p>
+        <ul>
+          <li>Identifies background services, boot receivers, and invisible processes</li>
+          <li>Distinguishes legitimate services (keyboards, accessibility) from suspicious ones</li>
+          <li>Useful for detecting stalkerware and spyware</li>
+        </ul>
+
+        <h3>Safe APK Installer</h3>
+        <p>Scan APK and XAPK files for threats before installing:</p>
+        <ul>
+          <li>Select an APK or XAPK (split APK bundle) file</li>
+          <li>Get a quick risk score with clear warnings</li>
+          <li>Review permissions and threat indicators before installing</li>
+          <li>Supports both standard APK and split XAPK formats</li>
+        </ul>
+
+        <h3>App Source Categories</h3>
+        <p>See where every installed app came from:</p>
+        <ul>
+          <li>Apps grouped by install source (Google Play, Samsung Store, Amazon, ADB, Unknown, System)</li>
+          <li>Highlights apps from unknown or unverified sources</li>
+          <li>Tap any app to add it for a detailed security scan</li>
+        </ul>
+      </div>
+
+      <!-- Language & Theme -->
+      <div class="content-card">
+        <h2>Language & Theme Settings</h2>
+
+        <h3>Changing Language</h3>
+        <p>MobInspect supports 7 languages: English, Bengali, Hindi, French, Japanese, Arabic, and Spanish.</p>
+        <ul>
+          <li>Choose your language on first launch in the Language Selection screen</li>
+          <li>Change anytime: Settings &gt; Appearance &gt; Language</li>
+          <li>Arabic includes full right-to-left (RTL) layout support</li>
+        </ul>
+
+        <h3>Theme Selection</h3>
+        <p>Choose between System (auto), Light, or Dark themes in Settings &gt; Appearance &gt; Theme.</p>
+      </div>
+
+      <!-- MASVS & Scoring -->
+      <div class="content-card">
+        <h2>MASVS Compliance & Scoring</h2>
+
+        <h3>OWASP MASVS Compliance</h3>
+        <p>Each scan includes an assessment against the OWASP Mobile Application Security Verification Standard v2.0:</p>
+        <ul>
+          <li><strong>L1 (Standard):</strong> Basic security requirements every app should meet</li>
+          <li><strong>L2 (Defense-in-depth):</strong> Advanced protections for high-security apps</li>
+        </ul>
+
+        <h3>Scoring Matrix</h3>
+        <p>Understand exactly how risk scores are calculated by visiting Settings &gt; Scoring Matrix:</p>
+        <ul>
+          <li>Severity weights for each finding type</li>
+          <li>Combination multipliers for compounding risks</li>
+          <li>Grade classification thresholds (A through F)</li>
+          <li>Worked example showing the calculation step by step</li>
+        </ul>
+      </div>
+
     </div>
   </section>
 
@@ -257,7 +347,7 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-content">
-              <p>MobInspect supports Android 6.0 (Marshmallow) and above. For the best experience, we recommend Android 10 or later. Some features may be limited on older Android versions due to system restrictions.</p>
+              <p>MobInspect supports Android 7.0 (Nougat, API 24) and above, targeting Android 16 (SDK 36). For the best experience, we recommend Android 10 or later. Some features may be limited on older Android versions due to system restrictions.</p>
             </div>
           </div>
         </div>
@@ -392,13 +482,7 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-content">
-              <p>We collect minimal, anonymized usage analytics to help improve the app. This includes:</p>
-              <ul>
-                <li>App crashes and errors (to fix bugs)</li>
-                <li>Feature usage statistics (to improve the UI)</li>
-                <li>Device type and OS version (for compatibility)</li>
-              </ul>
-              <p>You can disable analytics in the app settings. We never collect information about the apps you scan.</p>
+              <p>No. MobInspect does not collect any analytics, telemetry, or usage data. The app contains no analytics SDKs (no Firebase, no Google Analytics, no crash reporting services). Everything runs 100% offline on your device — we have no way to collect data even if we wanted to.</p>
             </div>
           </div>
         </div>

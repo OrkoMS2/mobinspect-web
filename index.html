@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="MobInspect - Advanced Offline APK Security Analyzer with on-device AI-powered threat detection. Scan Android apps for malware, vulnerabilities, and privacy threats.">
-  <meta name="keywords" content="mobile security, APK scanner, malware detection, Android security, AI security, app scanner, offline scanner, privacy protection">
+  <meta name="keywords" content="mobile security, APK scanner, malware detection, Android security, AI security, app scanner, offline scanner, privacy protection, SARIF export, CSV export, MASVS compliance, multi-language, device scan, APK installer, trusted vault, OWASP mobile">
   <meta name="author" content="MobInspect Team">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0a0a0f">
@@ -45,8 +45,11 @@
     "@type": "SoftwareApplication",
     "name": "MobInspect",
     "operatingSystem": "Android",
+    "operatingSystemVersion": "7.0+",
     "applicationCategory": "SecurityApplication",
-    "description": "Offline APK Security Analyzer with AI-powered threat detection",
+    "applicationSubCategory": "MobileSecurity",
+    "softwareVersion": "1.1.1",
+    "description": "Offline APK Security Analyzer with AI-powered threat detection. Supports 7 languages, SARIF/CSV export, MASVS compliance, device-wide scanning, and trusted app verification.",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -160,12 +163,16 @@
           <div class="stat-label">AI Detection Layers</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">11</div>
+          <div class="stat-number">12</div>
           <div class="stat-label">Analysis Tabs</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">2</div>
+          <div class="stat-number">4</div>
           <div class="stat-label">Export Formats</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">7</div>
+          <div class="stat-label">Languages</div>
         </div>
       </div>
     </div>
@@ -247,8 +254,8 @@
         <!-- Feature 10: Multi-Format Export -->
         <div class="feature-card">
           <div class="feature-icon">📤</div>
-          <h3>Multi-Format Export</h3>
-          <p>Export reports in PDF, JSON, CSV, and SARIF formats. SARIF v2.1.0 support enables CI/CD integration with GitHub and Azure DevOps.</p>
+          <h3>4-Format Export System</h3>
+          <p>Export reports in PDF, JSON, CSV, and SARIF v2.1.0 formats — individually or in combined pairs (PDF+JSON, PDF+SARIF, SARIF+CSV, CSV+JSON). SARIF enables CI/CD integration with GitHub and Azure DevOps.</p>
         </div>
 
         <!-- Feature 11: Report Comparison -->
@@ -305,6 +312,62 @@
           <div class="feature-icon">🌐</div>
           <h3>Network Security Analysis</h3>
           <p>Analyze network security configurations, SSL pinning implementation, cleartext traffic settings, and discovered endpoints.</p>
+        </div>
+
+        <!-- Feature 19: Full Device Scan -->
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Full Device Security Scan</h3>
+          <p>Batch-scan all installed apps in one tap. Verify install sources, detect sideloaded apps, and get a device-level security grade with flagged apps summary.</p>
+        </div>
+
+        <!-- Feature 20: Multi-Language -->
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3>7-Language Support</h3>
+          <p>Full UI localization in English, Bengali, Hindi, French, Japanese, Arabic, and Spanish — including RTL support. Choose your language on first launch or anytime in Settings.</p>
+        </div>
+
+        <!-- Feature 21: Trusted Apps Vault -->
+        <div class="feature-card">
+          <div class="feature-icon">🔏</div>
+          <h3>Trusted Apps Vault</h3>
+          <p>Lock in a known-good version of any app with SHA-256 checksum verification. Get alerted instantly if the APK is modified or re-signed behind your back.</p>
+        </div>
+
+        <!-- Feature 22: Safe APK Installer -->
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Safe APK Installer</h3>
+          <p>Scan APK and XAPK files for threats before installing. Get a quick risk score, permission review, and clear warnings — then install with confidence or walk away.</p>
+        </div>
+
+        <!-- Feature 23: Hidden Background Runners -->
+        <div class="feature-card">
+          <div class="feature-icon">👻</div>
+          <h3>Hidden Service Detector</h3>
+          <p>Find apps running silently without a launcher icon — background services, boot receivers, and invisible processes. Useful for detecting stalkerware and spyware.</p>
+        </div>
+
+        <!-- Feature 24: App Source Categories -->
+        <div class="feature-card">
+          <div class="feature-icon">🏪</div>
+          <h3>App Source Categories</h3>
+          <p>See where every installed app came from — Google Play, Samsung Store, Amazon, ADB, or unknown sources. Highlights unverified apps for immediate review.</p>
+        </div>
+
+        <!-- Feature 25: MASVS Compliance -->
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h3>OWASP MASVS Compliance</h3>
+          <p>Assess each scanned app against OWASP Mobile Application Security Verification Standard v2.0 with L1 (Standard) and L2 (Defense-in-depth) scoring.</p>
+        </div>
+
+        <!-- Feature 26: Scoring Transparency -->
+        <div class="feature-card">
+          <div class="feature-icon">🧮</div>
+          <h3>Transparent Scoring Matrix</h3>
+          <p>Understand exactly how risk scores are calculated — severity weights, combination multipliers, grade thresholds, and a worked example. No black boxes.</p>
         </div>
       </div>
     </div>
@@ -523,15 +586,15 @@
               <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
               <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
             </tr>
-            <!-- <tr>
-              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">SARIF Export (CI/CD)</td>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">SARIF + CSV Export</td>
               <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
               <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
               <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
               <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
               <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
               <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
-            </tr> -->
+            </tr>
             <tr>
               <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Report Comparison</td>
               <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
@@ -576,6 +639,60 @@
               <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
               <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
               <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Multi-Language UI (7 languages)</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Full Device Batch Scan</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Trusted Apps Vault (SHA-256)</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Hidden Service Detection</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Safe APK Pre-Install Scan</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">OWASP MASVS Compliance</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--success);">✓</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
+              <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); text-align: center; color: var(--danger);">✗</td>
             </tr>
             <tr>
               <td style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); font-weight: 500;">Free to Use</td>

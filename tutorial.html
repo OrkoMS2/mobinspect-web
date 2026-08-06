@@ -131,9 +131,8 @@
           <h3 class="tutorial-cyber-text">Select Your APK File</h3>
           <p>Launch MobInspect and tap the scan button on the home screen. You have three options to select an APK:</p>
           <ul>
-            <li><strong>Browse Files:</strong> Navigate to an APK file stored on your device</li>
+            <li><strong>Browse Files:</strong> Navigate to an APK or XAPK file stored on your device</li>
             <li><strong>Installed Apps:</strong> Select from apps already installed on your phone</li>
-            <li><strong>Recent Downloads:</strong> Quick access to recently downloaded APK files</li>
           </ul>
           <div class="neon-card" style="margin-top: 1rem; padding: 1rem;">
             <strong style="color: var(--primary);">Pro Tip:</strong> You can scan any APK file regardless of where it
@@ -350,6 +349,172 @@
             <li>Automated processing and analysis</li>
             <li>Custom report generation</li>
             <li>Data archival and backup</li>
+          </ul>
+        </div>
+
+        <div class="neon-card">
+          <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: var(--primary);">🔗</span> SARIF Export
+          </h3>
+          <p>SARIF v2.1.0 output for CI/CD integration:</p>
+          <ul>
+            <li>GitHub Code Scanning &amp; Azure DevOps</li>
+            <li>SonarQube and SARIF Viewer (VS Code)</li>
+            <li>Jira and DefectDojo adapters</li>
+            <li>CWE taxonomy &amp; partial fingerprints</li>
+          </ul>
+        </div>
+
+        <div class="neon-card">
+          <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: var(--accent);">📊</span> CSV Export
+          </h3>
+          <p>Spreadsheet-ready findings for analysis:</p>
+          <ul>
+            <li>17-column format with CVSS scores</li>
+            <li>Open in Excel, Google Sheets, or Numbers</li>
+            <li>Filter and sort findings by severity</li>
+            <li>Bulk analysis and custom dashboards</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="neon-card" style="margin-top: var(--spacing-md); padding: 1rem;">
+        <strong style="color: var(--secondary);">Combined Exports:</strong> You can also export in combined formats — PDF+JSON, PDF+SARIF, SARIF+CSV, or CSV+JSON. Set your preferred default format in Settings &gt; Reports &gt; Default Export Format.
+      </div>
+    </div>
+  </section>
+
+  <div class="cyber-divider"></div>
+
+  <!-- Security Tools Section -->
+  <section class="content-section" id="security-tools">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Security Tools</span>
+        <h2 class="tutorial-cyber-text">Device Security Suite</h2>
+        <p>Protect your entire device with these advanced security tools (Settings &gt; Security Tools)</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="neon-card">
+          <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: var(--primary);">📱</span> Full Device Scan
+          </h3>
+          <p>Batch-scan all installed apps on your device:</p>
+          <ol style="padding-left: 1.5rem;">
+            <li>Open Settings &gt; Security Tools &gt; Full Device Scan</li>
+            <li>Review the preview: total apps, user vs. system, estimated time</li>
+            <li>Tap "Start Scan" to begin</li>
+            <li>View the summary with flagged apps and device security grade</li>
+            <li>Tap any flagged app to run a detailed scan or extract its APK</li>
+          </ol>
+        </div>
+
+        <div class="neon-card">
+          <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: var(--secondary);">🔐</span> Trusted Apps Vault
+          </h3>
+          <p>Verify app integrity with SHA-256 checksums:</p>
+          <ol style="padding-left: 1.5rem;">
+            <li>Scan an app normally, then tap "Trust This Version"</li>
+            <li>The app's SHA-256 hash is saved to the vault</li>
+            <li>Later, use "Verify All" to check all trusted apps</li>
+            <li>Get alerted if an app was modified or re-signed</li>
+            <li>Re-trust the current version or remove trust</li>
+          </ol>
+        </div>
+
+        <div class="neon-card">
+          <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: var(--accent);">🛡️</span> Safe APK Installer
+          </h3>
+          <p>Scan APK/XAPK files before installing:</p>
+          <ol style="padding-left: 1.5rem;">
+            <li>Open Settings &gt; Security Tools &gt; Safe APK Installer</li>
+            <li>Select an APK or XAPK (split APK bundle) file</li>
+            <li>Review the quick risk score and threat warnings</li>
+            <li>Decide whether to proceed with installation</li>
+          </ol>
+        </div>
+
+        <div class="neon-card">
+          <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: var(--danger);">👁️</span> Hidden Background Runners
+          </h3>
+          <p>Find apps running silently without a launcher icon:</p>
+          <ol style="padding-left: 1.5rem;">
+            <li>Open Settings &gt; Security Tools &gt; Hidden Background Runners</li>
+            <li>View apps with background services but no visible presence</li>
+            <li>Legitimate services (keyboards, accessibility) are clearly labeled</li>
+            <li>Investigate suspicious runners for possible stalkerware</li>
+          </ol>
+        </div>
+
+        <div class="neon-card">
+          <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: var(--warning);">📂</span> App Source Categories
+          </h3>
+          <p>See where every installed app came from:</p>
+          <ol style="padding-left: 1.5rem;">
+            <li>Open Settings &gt; Security Tools &gt; App Source Categories</li>
+            <li>Apps grouped by source: Google Play, Samsung, Amazon, ADB, Unknown, System</li>
+            <li>Unknown-source apps are highlighted for review</li>
+            <li>Tap any app to add it for a detailed scan</li>
+          </ol>
+        </div>
+
+        <div class="neon-card">
+          <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: var(--primary);">📥</span> APK Extraction
+          </h3>
+          <p>Extract any installed app's APK file:</p>
+          <ol style="padding-left: 1.5rem;">
+            <li>Run a Full Device Scan or navigate to an app in App Sources</li>
+            <li>Tap the extract option on any app</li>
+            <li>The APK is saved to your Downloads folder</li>
+            <li>Share or archive the extracted APK as needed</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cyber-divider"></div>
+
+  <!-- Language & Theme Section -->
+  <section class="content-section" id="language" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Personalization</span>
+        <h2 class="tutorial-cyber-text">Language &amp; Theme</h2>
+        <p>Customize MobInspect to your preferences</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="neon-card">
+          <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: var(--primary);">🌐</span> 7 Languages
+          </h3>
+          <p>MobInspect supports full UI localization in 7 languages:</p>
+          <ul>
+            <li>English, Bengali, Hindi, French, Japanese, Arabic, Spanish</li>
+            <li>Select your language on first launch</li>
+            <li>Change anytime: Settings &gt; Appearance &gt; Language</li>
+            <li>Arabic includes full right-to-left (RTL) layout support</li>
+          </ul>
+        </div>
+
+        <div class="neon-card">
+          <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: var(--secondary);">🎨</span> Theme Selection
+          </h3>
+          <p>Choose the look that suits you:</p>
+          <ul>
+            <li><strong>System:</strong> Automatically follows your device's light/dark setting</li>
+            <li><strong>Light:</strong> Bright theme for daytime use</li>
+            <li><strong>Dark:</strong> Easy on the eyes in low-light environments</li>
+            <li>Change in Settings &gt; Appearance &gt; Theme</li>
           </ul>
         </div>
       </div>

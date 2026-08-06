@@ -66,7 +66,7 @@
       <h1>Privacy Policy</h1>
       <p>MobInspect is designed with privacy at its core. All scanning happens entirely on your device - we never collect, transmit, or store your data.</p>
       <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
-        <strong>Last Updated:</strong> January 2026 | <strong>Effective Date:</strong> January 2026
+        <strong>Last Updated:</strong> August 2026 | <strong>Effective Date:</strong> January 2026
       </p>
     </div>
   </header>
@@ -157,8 +157,9 @@
         <ul>
           <li><strong>Scan Reports:</strong> Saved in the app's private storage directory</li>
           <li><strong>Scan History:</strong> Maintained locally using Hive database</li>
-          <li><strong>App Settings:</strong> Preferences stored locally on your device</li>
-          <li><strong>Exported Reports:</strong> PDF and JSON exports saved to your chosen location</li>
+          <li><strong>App Settings:</strong> Preferences (theme, language, export format) stored locally on your device</li>
+          <li><strong>Trusted Apps Vault:</strong> SHA-256 checksums of trusted app versions stored locally for integrity verification</li>
+          <li><strong>Exported Reports:</strong> PDF, JSON, SARIF, and CSV exports saved to your Downloads folder</li>
         </ul>
         <p>This data remains under your complete control and is never transmitted to us or any third party.</p>
 
@@ -182,6 +183,7 @@
           <li><strong>Purpose:</strong> Read APK files from your device storage for analysis</li>
           <li><strong>Usage:</strong> Only accesses files you explicitly select for scanning</li>
           <li><strong>Data:</strong> File contents are processed locally and never transmitted</li>
+          <li><strong>Export:</strong> On Android 10+, exported reports (PDF, JSON, SARIF, CSV) are saved to your Downloads folder via MediaStore — no broad storage permission needed</li>
         </ul>
 
         <h3>4.2 Notification Permission (Optional)</h3>
@@ -196,6 +198,20 @@
           <li><strong>Purpose:</strong> Continue scanning when the app is in the background</li>
           <li><strong>Usage:</strong> Shows a persistent notification during active scans</li>
           <li><strong>Control:</strong> Service stops automatically when scan completes</li>
+        </ul>
+
+        <h3>4.4 Query Installed Packages</h3>
+        <ul>
+          <li><strong>Purpose:</strong> List installed apps for the Full Device Security Scan and App Source Categories features</li>
+          <li><strong>Usage:</strong> Enumerates installed app names and install sources — does not access app data</li>
+          <li><strong>Data:</strong> App list is processed locally and never transmitted</li>
+        </ul>
+
+        <h3>4.5 Install Packages (Optional)</h3>
+        <ul>
+          <li><strong>Purpose:</strong> Used by the Safe APK Installer to install APK files after pre-install scanning</li>
+          <li><strong>Usage:</strong> Only triggered when you explicitly tap "Install" after reviewing the scan results</li>
+          <li><strong>Control:</strong> Requires manual opt-in via Android system settings</li>
         </ul>
       </div>
 
@@ -244,6 +260,8 @@
         <ul>
           <li>Export scan reports as PDF documents</li>
           <li>Export scan data as JSON files</li>
+          <li>Export findings in SARIF v2.1.0 format for CI/CD integration</li>
+          <li>Export findings as CSV spreadsheets</li>
           <li>Share reports via any sharing method on your device</li>
         </ul>
       </div>
@@ -356,6 +374,14 @@
               <tr>
                 <td style="padding: 1rem; border: 1px solid var(--border-color);">Data Control</td>
                 <td style="padding: 1rem; border: 1px solid var(--border-color);">100% user controlled</td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem; border: 1px solid var(--border-color);">Export Formats</td>
+                <td style="padding: 1rem; border: 1px solid var(--border-color);">PDF, JSON, SARIF, CSV</td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem; border: 1px solid var(--border-color);">Languages Supported</td>
+                <td style="padding: 1rem; border: 1px solid var(--border-color);">7 (EN, BN, HI, FR, JA, AR, ES)</td>
               </tr>
             </tbody>
           </table>
